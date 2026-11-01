@@ -94,10 +94,10 @@
   }
 
   // opening hours → highlight today + open/closed badge
-  const hours = { 0: [13, 18], 1: [7.5, 18], 2: [7.5, 18], 3: [7.5, 18], 4: [7.5, 18], 5: [7.5, 18], 6: [9, 17] };
+  const hours = { 0: [9, 18], 1: [8, 18], 2: [8, 18], 3: [8, 18], 4: [8, 18], 5: [8, 18], 6: [9, 18] };
   const now = new Date(), d = now.getDay(), h = now.getHours() + now.getMinutes() / 60;
   const fmt = x => `${Math.floor(x)}:${x % 1 ? '30' : '00'}`;
-  $$(`#hours li[data-day="${d === 0 ? '0' : d === 6 ? '6' : '1'}"]`).forEach(li => li.classList.add('today'));
+  $$(`#hours li[data-day="${d === 0 || d === 6 ? 'we' : 'wk'}"]`).forEach(li => li.classList.add('today'));
   const [o, c] = hours[d];
   $$('[data-open-state]').forEach(el => {
     if (h >= o && h < c) el.textContent = `Právě otevřeno · do ${fmt(c)}`;

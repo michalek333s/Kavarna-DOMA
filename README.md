@@ -13,8 +13,11 @@ Statický web (HTML + CSS + JS, bez závislostí). Otevřete `index.html` v proh
 
 Společné styly a skripty jsou v `assets/styles.css` a `assets/main.js`, fotky v `assets/img/`.
 
+## Údaje
+K Šatlavě 2, 741 01 Nový Jičín · 736 445 516 · kavarnadoma@seznam.cz · Po–Pá 8–18, So–Ne 9–18
+(otevírací doba je v HTML i v `assets/main.js` – kvůli stavu „Právě otevřeno“)
+
 ## Ověřit s majitelkou
-- otevírací doba (zatím ukázková – v HTML i v `assets/main.js`), přesná adresa
 - ceny a položky v menu (ukázkové)
 - odkaz na Facebook / Messenger
 - originál profilové fotky latte na polenech (`latte-polena.jpg` je výřez ze screenshotu)
