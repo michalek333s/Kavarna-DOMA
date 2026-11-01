@@ -18,6 +18,7 @@ K Šatlavě 2, 741 01 Nový Jičín · 736 445 516 · kavarnadoma@seznam.cz · P
 (otevírací doba je v HTML i v `assets/main.js` – kvůli stavu „Právě otevřeno“)
 
 ## Ověřit s majitelkou
-- ceny a položky v menu (ukázkové)
-- odkaz na Facebook / Messenger
+- menu je ukázka bez cen – sestavené z fotek a tabule s letní nabídkou
+- přesný odkaz na Facebook (zatím vyhledávání), Instagram: @kavarnadoma_novy_jicin
+- logo `assets/img/logo*.png` je převedené z rastrového obrázku – ideálně dodat originál ve vektoru (SVG/PDF)
 - originál profilové fotky latte na polenech (`latte-polena.jpg` je výřez ze screenshotu)

@@ -67,9 +67,9 @@
     const pill = $('.tabs__pill');
     const movePill = btn => { pill.style.width = btn.offsetWidth + 'px'; pill.style.transform = `translateX(${btn.offsetLeft}px)`; };
     const cards = {
-      kava:    { img: 'prelevani.jpg', alt: 'Přelévaná filtrovaná káva na pozadí naskládaného dřeva', t: 'Filtr z výběrovky měsíce', p: 'Zeptejte se nás na aktuální zrno — rádi Vám povíme, odkud pochází a proč nás tak baví.', h: 'a k tomu perníček ♥' },
+      kava:    { img: 'prelevani.jpg', alt: 'Přelévaná filtrovaná káva na pozadí naskládaného dřeva', t: 'Přelévaná káva', p: 'Zeptejte se nás, jaké zrno máme zrovna na mlýnku\u00a0— rádi Vám o\u00a0něm povíme.', h: 'a k\u00a0tomu perníček ♥' },
       snidane: { img: 'snidane-croissant.jpg', alt: 'Croissant sendvič, latte a pomerančový džus na podnosu s logem DOMA', t: 'Croissant sendvič', p: 'Křupavý croissant plný dobrot, k tomu latte a čerstvý džus. Takhle chutná dobré ráno.', h: 'snídaně jako doma ♥' },
-      napoje:  { img: 'ledova-kava.jpg', alt: 'Ledové latte a karamelové frappé se šlehačkou', t: 'Ledová káva & frappé', p: 'Když je venku horko: ledové latte nebo karamelové frappé se šlehačkou. Osvěží i potěší.', h: 'léto u nás ☀' },
+      sezona:  { img: 'dyne-latte.jpg', alt: 'Latte art dýně v keramickém hrnku', t: 'Co je zrovna v sezóně', p: 'V\u00a0létě káva na ledu a melounová limonáda, na podzim dýňové latte. Nabídka se mění s\u00a0ročním obdobím.', h: 'sledujte nás na Instagramu ♥' },
       sladke:  { img: 'dort-cokomalina.jpg', alt: 'Čokomalina – čokoládový dort s malinovým želé', t: 'Oblíbená čokomalina', p: 'Čokoládový dort s\u00a0malinami, kvůli kterému se k\u00a0nám hosté vracejí. A\u00a0ve vitríně vždy najdete i\u00a0něco veganského.', h: 'dortíky pečeme s\u00a0láskou ♥' }
     };
     Object.values(cards).forEach(c => { new Image().src = 'assets/img/' + c.img; });

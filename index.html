@@ -6,7 +6,8 @@
   <title>Kavárna DOMA · Nový Jičín</title>
   <meta name="description" content="Kavárna DOMA – výběrová káva v centru Nového Jičína. Zavřete oči a vychutnejte si vůni výběrové kávy.">
   <meta name="theme-color" content="#F5EDE2">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232A1C15'/%3E%3Cpath d='M18 28h24v7a12 12 0 0 1-24 0z' fill='%23E6B98A'/%3E%3Cpath d='M28 22s-4-2.4-4-5a2.2 2.2 0 0 1 4-1 2.2 2.2 0 0 1 4 1c0 2.6-4 5-4 5z' fill='%23E6B98A'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" href="assets/img/logo-fav.png">
+  <link rel="apple-touch-icon" href="assets/img/logo-fav.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,100;1,9..144,300..700,100&family=Instrument+Sans:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
@@ -17,10 +18,7 @@
 
 <header class="nav" id="nav">
   <a href="index.html" class="brand" aria-label="Kavárna DOMA – domů">
-    <span class="brand__mark" aria-hidden="true">
-      <svg viewBox="0 0 40 40"><path d="M17 12.5s-3-1.8-3-3.7a1.6 1.6 0 0 1 3-.7 1.6 1.6 0 0 1 3 .7c0 1.9-3 3.7-3 3.7z" fill="currentColor"/><path d="M9 17h17v5.5a8.5 8.5 0 0 1-17 0z" fill="currentColor"/><path d="M26 19h1.6a3.2 3.2 0 0 1 0 6.4H25" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 33h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-    </span>
-    <span class="brand__name"><span class="brand__script">Doma</span><span class="brand__sub">kavárna</span></span>
+    <img class="brand__logo" src="assets/img/logo.png" alt="Kavárna Doma" width="480" height="480">
   </a>
   <nav class="nav__links" aria-label="Hlavní menu">
     <a href="menu.html">Menu</a>
@@ -67,6 +65,7 @@
       <img src="assets/img/kava-tulipany.jpg" alt="Černá káva v dlaních a kytice tulipánů" width="909" height="960">
       <figcaption>ranní káva s&nbsp;tulipány</figcaption>
     </figure>
+    <span class="hero__stamp hero-photo" style="--d:.55s" aria-hidden="true"><img src="assets/img/logo.png" alt="" width="480" height="480"></span>
   </div>
 </section>
 
@@ -123,6 +122,24 @@
   </div>
 </section>
 
+<section class="ig">
+  <div class="ig__head">
+    <div>
+      <p class="eyebrow reveal">Instagram</p>
+      <h2 class="h2 reveal">Každý den <em>něco nového</em></h2>
+    </div>
+    <a class="btn btn--ghost reveal" href="https://www.instagram.com/kavarnadoma_novy_jicin/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg> @kavarnadoma_novy_jicin</a>
+  </div>
+  <div class="ig__grid">
+    <a class="ig__tile reveal" style="--d:0.00s" href="https://www.instagram.com/kavarnadoma_novy_jicin/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/granola.jpg" alt="" loading="lazy"></a>
+    <a class="ig__tile reveal" style="--d:0.06s" href="https://www.instagram.com/kavarnadoma_novy_jicin/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/dort-cokomalina.jpg" alt="" loading="lazy"></a>
+    <a class="ig__tile reveal" style="--d:0.12s" href="https://www.instagram.com/kavarnadoma_novy_jicin/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/zajic.jpg" alt="" loading="lazy"></a>
+    <a class="ig__tile reveal" style="--d:0.18s" href="https://www.instagram.com/kavarnadoma_novy_jicin/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/toast.jpg" alt="" loading="lazy"></a>
+    <a class="ig__tile reveal" style="--d:0.24s" href="https://www.instagram.com/kavarnadoma_novy_jicin/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/snehulak.jpg" alt="" loading="lazy"></a>
+    <a class="ig__tile reveal" style="--d:0.30s" href="https://www.instagram.com/kavarnadoma_novy_jicin/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/kolace.jpg" alt="" loading="lazy"></a>
+  </div>
+</section>
+
 <section class="band">
   <div class="visit__card band__card reveal">
     <div class="band__intro">
@@ -156,7 +173,7 @@
 <footer class="footer">
   <div class="footer__grid">
     <div class="footer__brand">
-      <p class="footer__logo">Doma</p>
+      <img class="footer__logo" src="assets/img/logo-light.png" alt="Kavárna Doma" width="480" height="480" loading="lazy">
       <p class="footer__bio">Rodinná kavárna v centru Nového Jičína&nbsp;🤎<br>V dlaních šálek kávy a láskyplná pohoda všude kolem nás&nbsp;☕</p>
     </div>
     <div>
