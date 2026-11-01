@@ -197,7 +197,7 @@ em{font-style:italic}
 
 /* chalkboard with their own words */
 .chalk{position:absolute;z-index:3;left:0;bottom:0;width:54%;padding:11px;border-radius:12px;background:linear-gradient(135deg,#a9784f,#7b5134 55%,#94653f);box-shadow:0 30px 50px -24px rgba(42,28,21,.6),inset 0 0 0 1px rgba(255,255,255,.12)}
-.chalk__in{position:relative;border-radius:5px;padding:20px 22px 16px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.4),inset 0 0 30px rgba(0,0,0,.35)}
+.chalk__in{position:relative;border-radius:5px;padding:22px 22px 24px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.4),inset 0 0 30px rgba(0,0,0,.35)}
 .chalk__doodle{position:absolute;right:14px;top:12px;width:42px;opacity:.75}
 .chalk__doodle path{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .chalk__text{font-size:clamp(1.3rem,1.85vw,1.7rem);line-height:1.15;padding-right:36px}
@@ -578,7 +578,7 @@ section{position:relative}
   .hero__snap{width:36%;padding:6px 6px 0}
   .hero__snap figcaption{font-size:1rem;padding:3px 0 6px}
   .chalk{width:72%;padding:8px}
-  .chalk__in{padding:14px 16px 12px}
+  .chalk__in{padding:15px 16px 17px}
   .chalk__text{font-size:1.2rem;padding-right:30px}
   .chalk__by{font-size:.9rem}
   .chalk__doodle{width:30px;right:10px;top:10px}
