@@ -24,13 +24,11 @@ Nahrajte fotky do `assets/img/` pod těmito názvy. Dokud tam nejsou, zobrazí s
 | `banana-bread.jpg` | banana bread + dýně | galerie |
 | `snehulak.jpg` | sněhulák v latte + srdce ve sněhu | galerie |
 
-Už nahrané: `snidane-croissant.jpg`, `ledova-kava.jpg`, `dve-latte.jpg`, `poukaz.jpg`, `podnos.jpg`, `kolace.jpg`, `croissant-medvidek.jpg`, `rosetta.jpg`, `melounove-drinky.jpg`, `banana-bread.jpg`, `prelevani.jpg`, `dyne-latte.jpg`, `podzim-dobroty.jpg`, `drinky-podloubi.jpg`.
-
-Zatím chybí: `kava-tulipany.jpg`, `liska.jpg`, `zajic.jpg`, `snehulak.jpg`, `snidane.jpg`.
+Všechny fotky jsou nahrané. Galerie automaticky zobrazí jen fotky, které ve složce existují, takže novou fotku stačí přidat do `assets/img/` a doplnit do galerie v `index.html`.
 
 Galerie automaticky zobrazí jen fotky, které ve složce existují – stačí nahrát soubor se správným názvem.
 
-`latte-logs.png`, `latte-polena.jpg` a `cup.jpg` jsou vyříznuté z Facebook profilu (nízké rozlišení), ideálně nahradit originály.
+`latte-logs.png` a `latte-polena.jpg` (úvodní kruhová fotka) jsou vyříznuté z Facebook profilu (nízké rozlišení), ideálně nahradit originály.
 
 ## Ověřit s majitelkou
 - otevírací doba (zatím ukázková), přesná adresa, ceny v menu (ukázkové)

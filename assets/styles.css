@@ -221,7 +221,7 @@ section{position:relative}
 
 /* ---------- senses ---------- */
 .senses{min-height:90vh;display:grid;place-items:center;overflow:hidden;background:var(--espresso);color:var(--cream);margin:0 clamp(0px,1.5vw,20px);border-radius:clamp(0px,3vw,var(--r-lg))}
-.senses__bg{position:absolute;inset:-12%;background-size:cover;background-position:center;filter:blur(14px) saturate(.9) brightness(.55);transform:scale(1.15)}
+.senses__bg{position:absolute;inset:-12%;background-size:cover;background-position:center;filter:blur(3px) saturate(.95) brightness(.6);transform:scale(1.08)}
 .senses::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(42,28,21,.35),rgba(42,28,21,.9) 75%)}
 .senses__inner{position:relative;z-index:1;max-width:1000px;padding:120px var(--gutter);text-align:center}
 .senses__text{
