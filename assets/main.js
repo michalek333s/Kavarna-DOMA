@@ -29,6 +29,42 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   $$('.reveal').forEach(el => io.observe(el));
 
+  // hero: collage layers drift softly with the pointer
+  const hp = $('#heroPhotos');
+  if (hp) {
+    $$('[data-depth]', hp).forEach(el => el.style.setProperty('--dp', el.dataset.depth));
+    if (!reduce && matchMedia('(pointer:fine)').matches) {
+      const hero = hp.closest('.hero');
+      hero.addEventListener('pointermove', e => {
+        const r = hero.getBoundingClientRect();
+        hp.style.setProperty('--px', (((e.clientX - r.left) / r.width) * 2 - 1).toFixed(3));
+        hp.style.setProperty('--py', (((e.clientY - r.top) / r.height) * 2 - 1).toFixed(3));
+      });
+      hero.addEventListener('pointerleave', () => { hp.style.setProperty('--px', 0); hp.style.setProperty('--py', 0); });
+    }
+  }
+
+  // hero: little hearts rise from the latte now and then
+  const hearts = $('#hearts');
+  if (hearts && !reduce) {
+    const svg = '<svg viewBox="0 0 20 18"><path d="M10 17S1 11.3 1 5.6A4.6 4.6 0 0 1 10 3.4a4.6 4.6 0 0 1 9 2.2C19 11.3 10 17 10 17z" fill="currentColor"/></svg>';
+    let visible = true;
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(hearts.parentElement);
+    const puff = () => {
+      if (visible && !document.hidden) {
+        const h = document.createElement('span');
+        h.className = 'heartlet'; h.innerHTML = svg;
+        h.style.setProperty('--dx', (Math.random() * 60 - 30).toFixed(0) + 'px');
+        h.style.setProperty('--rot', (Math.random() * 40 - 20).toFixed(0) + 'deg');
+        h.style.left = (Math.random() * 40 - 20).toFixed(0) + 'px';
+        const s = 0.7 + Math.random() * 0.6; h.style.width = 18 * s + 'px'; h.style.height = 16 * s + 'px';
+        hearts.appendChild(h); setTimeout(() => h.remove(), 3600);
+      }
+      setTimeout(puff, 1400 + Math.random() * 1800);
+    };
+    setTimeout(puff, 2200);
+  }
+
   // gentle parallax
   const pEls = $$('[data-parallax]');
   if (!reduce && pEls.length) {
@@ -99,10 +135,11 @@
   const fmt = x => `${Math.floor(x)}:${x % 1 ? '30' : '00'}`;
   $$(`#hours li[data-day="${d === 0 || d === 6 ? 'we' : 'wk'}"]`).forEach(li => li.classList.add('today'));
   const [o, c] = hours[d];
+  const nextOpen = hours[(d + 1) % 7][0];
   $$('[data-open-state]').forEach(el => {
-    if (h >= o && h < c) el.textContent = `Právě otevřeno · do ${fmt(c)}`;
+    if (h >= o && h < c) el.textContent = `Právě máme otevřeno · do ${fmt(c)}`;
     else {
-      el.textContent = h < o ? `Dnes otevíráme v ${fmt(o)}` : 'Dnes už zavřeno · zítra zase';
+      el.textContent = h < o ? `Dnes otevíráme v ${fmt(o)} · těšíme se` : `Zítra od ${fmt(nextOpen)} jsme tu pro Vás`;
       el.parentElement.classList.add('is-closed');
     }
   });
