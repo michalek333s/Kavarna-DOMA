@@ -91,7 +91,8 @@
   // barista card follows the selected tab
   const cards = {
     kava:   { img: 'prelevani.jpg', alt: 'Přelévaná filtrovaná káva na pozadí naskládaného dřeva', t: 'Filtr z\u00a0výběrovky měsíce', p: 'Zeptejte se nás na aktuální zrno\u00a0— rádi Vám povíme, odkud pochází a\u00a0proč nás tak baví.', h: 'a k\u00a0tomu perníček ♥' },
-    napoje: { img: 'melounove-drinky.jpg', alt: 'Dvě melounové limonády s pomerančem mezi levandulí', t: 'Melounová limonáda', p: 'Domácí limonády s\u00a0čerstvým ovocem, mátou a spoustou ledu. Léto ve sklenici.', h: 'na zdraví! ☀' },
+    snidane: { img: 'snidane-croissant.jpg', alt: 'Croissant sendvič, latte a pomerančový džus na podnosu s logem DOMA', t: 'Croissant sendvič', p: 'Křupavý croissant plný dobrot, k\u00a0tomu latte a čerstvý džus. Takhle chutná dobré ráno.', h: 'snídaně jako doma ♥' },
+    napoje: { img: 'ledova-kava.jpg', alt: 'Ledové latte a karamelové frappé se šlehačkou', t: 'Ledová káva & frappé', p: 'Když je venku horko: ledové latte nebo karamelové frappé se šlehačkou. Osvěží i\u00a0potěší.', h: 'léto u nás ☀' },
     sladke: { img: 'kolace.jpg', alt: 'Domácí koláče a fíkový koláč při svíčce', t: 'Domácí koláče', p: 'Pečené s\u00a0láskou, jako od babičky. A\u00a0když se poštěstí, i\u00a0fíkový koláč.', h: 'voní celou kavárnou ♥' }
   };
   const cardImg = () => document.getElementById('cardImg');
@@ -101,7 +102,7 @@
     const c = cards[key], img = cardImg();
     img?.classList.add('swap'); cardBody.classList.add('swap');
     setTimeout(() => {
-      if (img) { img.src = 'assets/img/' + c.img; img.alt = c.alt; }
+      if (img) { img.style.visibility = ''; img.src = 'assets/img/' + c.img; img.alt = c.alt; }
       document.getElementById('cardTitle').textContent = c.t;
       document.getElementById('cardText').textContent = c.p;
       document.getElementById('cardHand').textContent = c.h;

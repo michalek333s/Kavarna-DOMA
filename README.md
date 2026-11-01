@@ -8,10 +8,10 @@ Nahrajte fotky do `assets/img/` pod těmito názvy. Dokud tam nejsou, zobrazí s
 
 | Soubor | Fotka | Kde je použita |
 |---|---|---|
-| `podnos.jpg` | dřevěný podnos s logem, dezerty, drink | velká fotka v sekci „Náš příběh“ |
+| `podnos.jpg` | dřevěný podnos s logem, dezerty, drink | koláž v sekci „Náš příběh“ |
 | `kava-tulipany.jpg` | černá káva v dlaních + tulipány | pozadí sekce „Zavřete oči“ + galerie |
 | `prelevani.jpg` | přelévání filtru, dřevo v pozadí | menu – karta Káva |
-| `melounove-drinky.jpg` | melounové limonády s levandulí | menu – karta Nejen káva |
+| `melounove-drinky.jpg` | melounové limonády s levandulí | galerie |
 | `kolace.jpg` | koláče + fíkový koláč, svíčka | menu – karta Sladké + galerie |
 | `drinky-podloubi.jpg` | dva drinky v podloubí | sekce Návštěva |
 | `croissant-medvidek.jpg` | latte medvídek + croissant | galerie |
@@ -23,6 +23,8 @@ Nahrajte fotky do `assets/img/` pod těmito názvy. Dokud tam nejsou, zobrazí s
 | `zajic.jpg` | zajíček, narcisy, cappuccino | galerie |
 | `banana-bread.jpg` | banana bread + dýně | galerie |
 | `snehulak.jpg` | sněhulák v latte + srdce ve sněhu | galerie |
+
+Už nahrané: `snidane-croissant.jpg` (menu – Snídaně), `ledova-kava.jpg` (menu – Nápoje), `dve-latte.jpg` (Náš příběh), `poukaz.jpg` (sekce Dárkové poukazy).
 
 `latte-logs.png`, `latte-polena.jpg` a `cup.jpg` jsou vyříznuté z Facebook profilu (nízké rozlišení), ideálně nahradit originály.
 

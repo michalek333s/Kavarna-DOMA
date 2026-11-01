@@ -28,6 +28,7 @@
     <a href="#pribeh">Náš příběh</a>
     <a href="#menu">Menu</a>
     <a href="#atmosfera">Atmosféra</a>
+    <a href="#poukaz">Poukazy</a>
     <a href="#navsteva">Návštěva</a>
   </nav>
   <a class="btn btn--small btn--dark nav__cta" href="tel:+420736445516">
@@ -41,6 +42,7 @@
   <a href="#pribeh">Náš příběh</a>
   <a href="#menu">Menu</a>
   <a href="#atmosfera">Atmosféra</a>
+  <a href="#poukaz">Poukazy</a>
   <a href="#navsteva">Návštěva</a>
   <a class="btn btn--dark" href="tel:+420736445516">Zavolat · 736 445 516</a>
 </div>
@@ -150,14 +152,21 @@
       </li>
     </ul>
   </div>
-  <figure class="story__photo reveal">
-    <div class="story__photo-img art-cake" data-parallax="0.04">
-      <img src="assets/img/podnos.jpg" alt="Dřevěný podnos s logem Kavárny DOMA, latte, dezerty a drink" loading="lazy" onerror="this.remove()">
-    </div>
-    <figcaption class="story__photo-note"><span>s láskou z&nbsp;DOMA</span>
+  <div class="story__photos">
+    <figure class="sp sp--main reveal">
+      <div class="sp__img art-cake"><img src="assets/img/dve-latte.jpg" alt="Dvě latte s medvídkem a opičkou v dlaních nad kvetoucí hortenzií" loading="lazy" onerror="this.style.visibility='hidden'"></div>
+    </figure>
+    <figure class="sp sp--side reveal" style="--d:.15s">
+      <div class="sp__img art-window"><img src="assets/img/podnos.jpg" alt="Dřevěný podnos s logem Kavárny DOMA, latte, dezerty a drink" loading="lazy" onerror="this.style.visibility='hidden'"></div>
+    </figure>
+    <figcaption class="story__photo-note reveal" style="--d:.3s"><span>každé latte s&nbsp;úsměvem</span>
       <svg viewBox="0 0 120 60" aria-hidden="true"><path d="M4 8c30 4 60 18 92 42m0 0-14-2m14 2-3-14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </figcaption>
-  </figure>
+    <div class="sp__badge reveal" style="--d:.45s" aria-hidden="true">
+      <svg viewBox="0 0 120 120"><defs><path id="bc" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><text><textPath href="#bc">LATTE ART ✦ S LÁSKOU ✦ DOMA ✦ </textPath></text></svg>
+      <span>♥</span>
+    </div>
+  </div>
 </section>
 
 <!-- ───────────── SENZORICKÁ SEKCE ───────────── -->
@@ -178,7 +187,8 @@
     </div>
     <div class="tabs reveal" role="tablist" aria-label="Kategorie menu">
       <button role="tab" aria-selected="true" data-tab="kava">Káva</button>
-      <button role="tab" aria-selected="false" data-tab="napoje">Nejen káva</button>
+      <button role="tab" aria-selected="false" data-tab="snidane">Snídaně</button>
+      <button role="tab" aria-selected="false" data-tab="napoje">Nápoje</button>
       <button role="tab" aria-selected="false" data-tab="sladke">Sladké</button>
       <span class="tabs__pill" aria-hidden="true"></span>
     </div>
@@ -195,27 +205,37 @@
         <li><div><h4>Espresso tonic <span class="tag">sezónně</span></h4><p>Osvěžující kombinace na teplé dny.</p></div><span class="lead"></span><b>89 Kč</b></li>
       </ul>
     </div>
+    <div class="menu__panel" data-panel="snidane" role="tabpanel" hidden>
+      <ul class="items">
+        <li><div><h4>Croissant sendvič <span class="tag">oblíbené</span></h4><p>Máslový croissant, šunka, mozzarella, rajče a&nbsp;pesto.</p></div><span class="lead"></span><b>129 Kč</b></li>
+        <li><div><h4>Máslový croissant</h4><p>Křupavý, jednoduše dokonalý.</p></div><span class="lead"></span><b>55 Kč</b></li>
+        <li><div><h4>Snídaňové menu</h4><p>Sendvič, latte a&nbsp;fresh džus&nbsp;— ráno jako doma.</p></div><span class="lead"></span><b>199 Kč</b></li>
+        <li><div><h4>Fresh pomerančový džus</h4><p>Čerstvě vymačkaný.</p></div><span class="lead"></span><b>69 Kč</b></li>
+      </ul>
+    </div>
     <div class="menu__panel" data-panel="napoje" role="tabpanel" hidden>
       <ul class="items">
+        <li><div><h4>Ledové latte</h4><p>Espresso, studené mléko, hodně ledu.</p></div><span class="lead"></span><b>89 Kč</b></li>
+        <li><div><h4>Karamelové frappé <span class="tag">léto</span></h4><p>Se šlehačkou a&nbsp;slaným karamelem.</p></div><span class="lead"></span><b>109 Kč</b></li>
         <li><div><h4>Horká čokoláda</h4><p>Hustá, poctivá, jako od babičky.</p></div><span class="lead"></span><b>79 Kč</b></li>
         <li><div><h4>Chai latte</h4><p>Kořeněné, hřejivé, pohlazení na duši.</p></div><span class="lead"></span><b>85 Kč</b></li>
         <li><div><h4>Matcha latte</h4><p>Japonský zelený čaj s&nbsp;mlékem.</p></div><span class="lead"></span><b>89 Kč</b></li>
-        <li><div><h4>Sypaný čaj</h4><p>Konvička na sdílení.</p></div><span class="lead"></span><b>65 Kč</b></li>
-        <li><div><h4>Domácí limonáda</h4><p>Podle sezóny a nálady.</p></div><span class="lead"></span><b>69 Kč</b></li>
+                <li><div><h4>Melounová limonáda</h4><p>S&nbsp;pomerančem, mátou a&nbsp;ledem.</p></div><span class="lead"></span><b>79 Kč</b></li>
       </ul>
     </div>
     <div class="menu__panel" data-panel="sladke" role="tabpanel" hidden>
       <ul class="items">
         <li><div><h4>Dort dne</h4><p>Zeptejte se, co dnes voní z&nbsp;vitríny.</p></div><span class="lead"></span><b>od 79 Kč</b></li>
         <li><div><h4>Cheesecake</h4><p>Krémový, s&nbsp;ovocem podle sezóny.</p></div><span class="lead"></span><b>89 Kč</b></li>
-        <li><div><h4>Croissant</h4><p>Máslový, křupavý, ideální ke kávě.</p></div><span class="lead"></span><b>55 Kč</b></li>
+        <li><div><h4>Domácí koláče</h4><p>Tvarohové, povidlové, podle dne.</p></div><span class="lead"></span><b>45 Kč</b></li>
+        <li><div><h4>Makronky</h4><p>Barevné, křehké, i&nbsp;jako dárek.</p></div><span class="lead"></span><b>35 Kč</b></li>
         <li><div><h4>Banana bread</h4><p>Domácí, s&nbsp;ořechy a kapkou skořice.</p></div><span class="lead"></span><b>65 Kč</b></li>
       </ul>
     </div>
 
     <aside class="menu__card reveal" aria-live="polite">
       <div class="menu__card-photo art-window">
-        <img id="cardImg" src="assets/img/prelevani.jpg" alt="Přelévaná filtrovaná káva na pozadí naskládaného dřeva" onerror="this.remove()">
+        <img id="cardImg" src="assets/img/prelevani.jpg" alt="Přelévaná filtrovaná káva na pozadí naskládaného dřeva" onerror="this.style.visibility='hidden'">
         <span class="menu__card-label">Doporučení baristy</span>
       </div>
       <div class="menu__card-body">
@@ -238,20 +258,20 @@
 
   <div class="drift reveal">
     <div class="drift__row"><div class="drift__track">
-      <figure class="pol" style="--r:-3deg"><div class="pol__img art-cake"><img src="assets/img/latte-polena.jpg" alt="Latte s medvídkem na polenech" loading="lazy" onerror="this.remove()"></div><figcaption>zimní latte ❄</figcaption></figure>
-      <figure class="pol" style="--r:2deg"><div class="pol__img art-window"><img src="assets/img/croissant-medvidek.jpg" alt="Latte s medvídkem a croissant v ruce" loading="lazy" onerror="this.remove()"></div><figcaption>croissant &amp; medvídek</figcaption></figure>
-      <figure class="pol" style="--r:-2deg"><div class="pol__img art-tulips"><img src="assets/img/dyne-latte.jpg" alt="Latte art dýně v keramickém hrnku" loading="lazy" onerror="this.remove()"></div><figcaption>dýňová sezóna 🎃</figcaption></figure>
-      <figure class="pol" style="--r:3deg"><div class="pol__img art-snow"><img src="assets/img/kolace.jpg" alt="Domácí koláče a fíkový koláč při svíčce" loading="lazy" onerror="this.remove()"></div><figcaption>koláče jako od babičky</figcaption></figure>
-      <figure class="pol" style="--r:-4deg"><div class="pol__img art-cake"><img src="assets/img/kava-tulipany.jpg" alt="Černá káva v dlaních a kytice tulipánů" loading="lazy" onerror="this.remove()"></div><figcaption>káva &amp; tulipány</figcaption></figure>
-      <figure class="pol" style="--r:2deg"><div class="pol__img art-window"><img src="assets/img/snidane.jpg" alt="Snídaně na dřevěném stole s croissanty a latte" loading="lazy" onerror="this.remove()"></div><figcaption>snídaně venku</figcaption></figure>
+      <figure class="pol" style="--r:-3deg"><div class="pol__img art-cake"><img src="assets/img/latte-polena.jpg" alt="Latte s medvídkem na polenech" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>zimní latte ❄</figcaption></figure>
+      <figure class="pol" style="--r:2deg"><div class="pol__img art-window"><img src="assets/img/croissant-medvidek.jpg" alt="Latte s medvídkem a croissant v ruce" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>croissant &amp; medvídek</figcaption></figure>
+      <figure class="pol" style="--r:-2deg"><div class="pol__img art-tulips"><img src="assets/img/dyne-latte.jpg" alt="Latte art dýně v keramickém hrnku" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>dýňová sezóna 🎃</figcaption></figure>
+      <figure class="pol" style="--r:3deg"><div class="pol__img art-snow"><img src="assets/img/kolace.jpg" alt="Domácí koláče a fíkový koláč při svíčce" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>koláče jako od babičky</figcaption></figure>
+      <figure class="pol" style="--r:-4deg"><div class="pol__img art-cake"><img src="assets/img/kava-tulipany.jpg" alt="Černá káva v dlaních a kytice tulipánů" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>káva &amp; tulipány</figcaption></figure>
+      <figure class="pol" style="--r:2deg"><div class="pol__img art-window"><img src="assets/img/snidane.jpg" alt="Snídaně na dřevěném stole s croissanty a latte" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>snídaně venku</figcaption></figure>
     </div></div>
     <div class="drift__row drift__row--rev"><div class="drift__track">
-      <figure class="pol" style="--r:3deg"><div class="pol__img art-window"><img src="assets/img/liska.jpg" alt="Latte art medvídek vedle spící lištičky" loading="lazy" onerror="this.remove()"></div><figcaption>medvídek &amp; liška</figcaption></figure>
-      <figure class="pol" style="--r:-2deg"><div class="pol__img art-tulips"><img src="assets/img/podzim-dobroty.jpg" alt="Pumpkin spice latte a skořicové dobroty" loading="lazy" onerror="this.remove()"></div><figcaption>podzim na talíři</figcaption></figure>
-      <figure class="pol" style="--r:2deg"><div class="pol__img art-snow"><img src="assets/img/rosetta.jpg" alt="Cappuccino s rosettou v dlaních" loading="lazy" onerror="this.remove()"></div><figcaption>rosetta s láskou</figcaption></figure>
-      <figure class="pol" style="--r:-3deg"><div class="pol__img art-cake"><img src="assets/img/zajic.jpg" alt="Cappuccino, keramický zajíček a narcisy" loading="lazy" onerror="this.remove()"></div><figcaption>jaro u nás</figcaption></figure>
-      <figure class="pol" style="--r:3deg"><div class="pol__img art-window"><img src="assets/img/banana-bread.jpg" alt="Domácí banana bread a latte vedle dýně" loading="lazy" onerror="this.remove()"></div><figcaption>banana bread</figcaption></figure>
-      <figure class="pol" style="--r:-2deg"><div class="pol__img art-tulips"><img src="assets/img/snehulak.jpg" alt="Latte se sněhulákem a srdce ve sněhu" loading="lazy" onerror="this.remove()"></div><figcaption>srdce ze sněhu</figcaption></figure>
+      <figure class="pol" style="--r:3deg"><div class="pol__img art-window"><img src="assets/img/liska.jpg" alt="Latte art medvídek vedle spící lištičky" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>medvídek &amp; liška</figcaption></figure>
+      <figure class="pol" style="--r:-2deg"><div class="pol__img art-tulips"><img src="assets/img/podzim-dobroty.jpg" alt="Pumpkin spice latte a skořicové dobroty" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>podzim na talíři</figcaption></figure>
+      <figure class="pol" style="--r:2deg"><div class="pol__img art-snow"><img src="assets/img/rosetta.jpg" alt="Cappuccino s rosettou v dlaních" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>rosetta s láskou</figcaption></figure>
+      <figure class="pol" style="--r:-3deg"><div class="pol__img art-cake"><img src="assets/img/zajic.jpg" alt="Cappuccino, keramický zajíček a narcisy" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>jaro u nás</figcaption></figure>
+      <figure class="pol" style="--r:3deg"><div class="pol__img art-window"><img src="assets/img/banana-bread.jpg" alt="Domácí banana bread a latte vedle dýně" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>banana bread</figcaption></figure>
+      <figure class="pol" style="--r:-2deg"><div class="pol__img art-tulips"><img src="assets/img/snehulak.jpg" alt="Latte se sněhulákem a srdce ve sněhu" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>srdce ze sněhu</figcaption></figure>
     </div></div>
   </div>
 
@@ -282,8 +302,32 @@
   </div>
   <div class="service reveal" style="--d:.3s">
     <span class="service__num">04</span>
-    <h3>Dorty na objednávku</h3>
-    <p>Oslava, narozeniny, jen tak? Domluvte se s&nbsp;námi předem.</p>
+    <h3>Dárkové poukazy</h3>
+    <p>Darujte chvilku v&nbsp;DOMA&nbsp;— poukaz zabalíme s&nbsp;láskou.</p>
+  </div>
+</section>
+
+<!-- ───────────── POUKAZ ───────────── -->
+<section class="gift" id="poukaz">
+  <div class="gift__photo reveal">
+    <div class="gift__img"><img src="assets/img/poukaz.jpg" alt="Dárkový poukaz Kavárny DOMA, latte s medvídkem a makronky s poděkováním" loading="lazy"></div>
+    <span class="gift__tag" aria-hidden="true">Děkuji ♥</span>
+  </div>
+  <div class="gift__text">
+    <p class="eyebrow reveal">Dárek, který zahřeje</p>
+    <h2 class="h2 reveal">Darujte chvilku <em>DOMA</em></h2>
+    <p class="gift__lead reveal">Nevíte, čím udělat radost? Dárkový poukaz do naší kavárny potěší každého, kdo má rád dobrou kávu a&nbsp;klid. Hodnotu zvolíte sami, my ho zabalíme do obálky s&nbsp;medvídkem&nbsp;— a když budete chtít, přidáme i&nbsp;krabičku makronek.</p>
+    <ul class="gift__list reveal">
+      <li><span>☕</span>Hodnota podle Vašeho přání</li>
+      <li><span>✉</span>Zabalený v&nbsp;dárkové obálce</li>
+      <li><span>♥</span>Ideální k&nbsp;narozeninám, Vánocům i&nbsp;jen tak</li>
+    </ul>
+    <div class="hero__actions reveal">
+      <a class="btn btn--dark" href="tel:+420736445516">Objednat poukaz
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="#navsteva">Vyzvednout v&nbsp;kavárně</a>
+    </div>
   </div>
 </section>
 
@@ -316,7 +360,7 @@
   </div>
   <div class="visit__side">
   <figure class="visit__photo reveal art-window" style="--d:.1s">
-    <img src="assets/img/drinky-podloubi.jpg" alt="Přípitek dvěma drinky v podloubí Nového Jičína" loading="lazy" onerror="this.remove()">
+    <img src="assets/img/drinky-podloubi.jpg" alt="Přípitek dvěma drinky v podloubí Nového Jičína" loading="lazy" onerror="this.style.visibility='hidden'">
     <figcaption>na skok od náměstí ☀</figcaption>
   </figure>
   <div class="visit__map reveal" style="--d:.15s">
