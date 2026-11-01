@@ -143,11 +143,25 @@
     obs.observe(el);
   });
 
-  // gallery: duplicate tracks for a seamless loop
-  document.querySelectorAll('.drift__track').forEach(tr => {
-    tr.innerHTML += tr.innerHTML;
-    [...tr.children].slice(tr.children.length / 2).forEach(el => el.setAttribute('aria-hidden', 'true'));
-  });
+  // gallery: keep only photos that exist, then fill each row for a seamless loop
+  (async () => {
+    const tracks = [...document.querySelectorAll('.drift__track')];
+    const figs = tracks.flatMap(tr => [...tr.children]);
+    const ok = await Promise.all(figs.map(f => new Promise(res => {
+      const i = new Image(); i.onload = () => res(true); i.onerror = () => res(false);
+      i.src = f.querySelector('img').getAttribute('src');
+    })));
+    const avail = figs.filter((f, i) => ok[i]);
+    if (!avail.length) return;
+    tracks.forEach(tr => tr.innerHTML = '');
+    avail.forEach((f, i) => { f.querySelector('img').loading = 'eager'; tracks[avail.length > 5 ? i % 2 : 0].appendChild(f); });
+    tracks.forEach(tr => {
+      if (!tr.children.length) { tr.closest('.drift__row').remove(); return; }
+      const base = [...tr.children], need = innerWidth * 1.1;
+      while (tr.scrollWidth < need) base.forEach(f => tr.appendChild(f.cloneNode(true)));
+      [...tr.children].forEach(f => tr.appendChild(Object.assign(f.cloneNode(true), {})).setAttribute('aria-hidden', 'true'));
+    });
+  })();
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
