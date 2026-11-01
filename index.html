@@ -56,41 +56,28 @@
 <main>
 
 <section class="hero">
-  <svg class="hero__doodles" viewBox="0 0 1200 800" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-    <g class="doodle" style="--d:1.4s"><path d="M560 150c8-18 28-18 33 0 5-18 25-18 33 0 0 20-33 36-33 36s-33-16-33-36z"/></g>
-    <g class="doodle" style="--d:1.6s"><ellipse cx="1150" cy="90" rx="13" ry="20" transform="rotate(28 1150 90)"/><path d="M1142 76c10 6 10 22 16 28"/></g>
-    <g class="doodle" style="--d:1.8s"><path d="M40 730h62v14a31 28 0 0 1-62 0z"/><path d="M102 736h8a10 10 0 0 1 0 20h-9"/><path d="M28 778h86"/><path d="M60 718c-6-8 6-12 0-22m18 22c-6-8 6-12 0-22"/></g>
-  </svg>
-
   <div class="hero__text">
-    <p class="open-badge hero-in" style="--d:.05s"><span class="pulse"></span><span data-open-state>Dnes pro Vás otevřeno</span></p>
-    <h1 class="hero__title hero-in" style="--d:.12s">Vítáme Vás <span class="hero__doma">doma.<svg viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true"><path d="M6 26c50-14 120-20 186-16 34 2 66 6 100 12"/></svg></span></h1>
-    <p class="hero__lead hero-in" style="--d:.2s">Jsme malá rodinná kavárna v&nbsp;centru Nového Jičína, kousek od náměstí. Zavřete oči a&nbsp;vychutnejte si vůni výběrové kávy, domácí dortík a&nbsp;chvilku jen pro sebe.</p>
-    <div class="hero__actions hero-in" style="--d:.28s">
+    <h1 class="hero__title hero-in">Vítáme Vás <span class="hero__doma">doma.</span></h1>
+    <p class="hero__lead hero-in" style="--d:.08s">Jsme malá rodinná kavárna v&nbsp;centru Nového Jičína. Vaříme výběrovou kávu, pečeme dortíky a&nbsp;rádi si s&nbsp;Vámi popovídáme.</p>
+    <div class="hero__actions hero-in" style="--d:.16s">
       <a href="menu.html" class="btn btn--dark">Naše menu <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <a href="kontakt.html" class="btn btn--ghost">Kde nás najdete</a>
     </div>
-    <p class="hero__sign hero-in" style="--d:.36s">Těšíme se na Vás&nbsp;— Vaše DOMA&nbsp;<span class="beat">♥</span></p>
+    <p class="hero__info hero-in" style="--d:.24s"><span class="pulse"></span><span data-open-state>Dnes pro Vás otevřeno</span><span class="hero__dot">·</span><span>K&nbsp;Šatlavě&nbsp;2, Nový Jičín</span></p>
   </div>
-
-  <div class="hero__photos" id="heroPhotos">
-    <figure class="hero__back hero-photo" style="--d:.5s" data-depth="18">
-      <img src="assets/img/dort-cokomalina.jpg" alt="Čokomalina – čokoládový dort s malinami" width="504" height="553">
-      <figcaption>čokomalina</figcaption>
+  <div class="hero__row">
+    <figure class="hero__ph hero-photo" style="--d:.2s">
+      <img src="assets/img/majitelka.jpg" alt="Majitelka kavárny v zástěře s šálkem kávy" width="768" height="576" fetchpriority="high">
+      <figcaption>Za barem s&nbsp;úsměvem</figcaption>
     </figure>
-    <figure class="hero__main hero-photo" data-depth="8">
-      <img src="assets/img/liska.jpg" alt="Latte s medvídkem v pěně vedle spící lištičky u proutěného koše" width="1050" height="1400" fetchpriority="high">
-      <span class="hearts" id="hearts" aria-hidden="true"></span>
+    <figure class="hero__ph hero__ph--main hero-photo" style="--d:.3s">
+      <img src="assets/img/liska.jpg" alt="Latte s medvídkem v pěně vedle spící keramické lištičky" width="1050" height="1400">
+      <figcaption>Latte s&nbsp;medvídkem</figcaption>
     </figure>
-    <figure class="hero__pol hero-photo" style="--d:.35s" data-depth="-14">
-      <img src="assets/img/kava-tulipany.jpg" alt="Černá káva v dlaních a kytice tulipánů" width="909" height="960">
-      <figcaption>ranní káva s&nbsp;tulipány</figcaption>
+    <figure class="hero__ph hero-photo" style="--d:.4s">
+      <img src="assets/img/stul-rodina.jpg" alt="Rodinná snídaně u dřevěného stolu s bábovkou, croissanty a kávou" width="1120" height="1400">
+      <figcaption>Snídaně s&nbsp;celou rodinou</figcaption>
     </figure>
-    <span class="hero__stamp hero-photo" style="--d:.55s" data-depth="22" aria-hidden="true"><img src="assets/img/logo.png" alt="" width="480" height="480"></span>
-    <p class="hero__note hero-in" style="--d:1.1s" aria-hidden="true">
-      <svg viewBox="0 0 90 70"><path class="draw" d="M80 64C66 44 46 26 12 12m0 0 16-2M12 12l6 15"/></svg>
-      <span>s&nbsp;medvídkem, jak jinak</span>
-    </p>
   </div>
 </section>
 
@@ -104,7 +91,7 @@
     <p class="sign reveal">— Vaše rodinná kavárna DOMA</p>
   </div>
   <div class="collage reveal" style="--d:.1s">
-    <figure class="collage__main collage__main--owner"><img src="assets/img/majitelka.jpg" alt="Majitelka Kavárny DOMA v zástěře s šálkem kávy" loading="lazy"></figure>
+    <figure class="collage__main"><img src="assets/img/dve-latte.jpg" alt="Dvě latte s medvídkem a opičkou v dlaních nad kvetoucí hortenzií" loading="lazy"></figure>
     <figure class="collage__side"><img src="assets/img/interier.jpg" alt="Bar Kavárny DOMA s vitrínou dortů a tabulí s letní nabídkou" loading="lazy"><figcaption>u nás za barem</figcaption></figure>
   </div>
 </section>
