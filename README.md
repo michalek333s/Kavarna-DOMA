@@ -1,35 +1,20 @@
 # Kavárna DOMA – návrh webu
 
-Statický jednostránkový web (HTML + CSS + JS, bez závislostí). Otevřete `index.html` v prohlížeči.
+Statický web (HTML + CSS + JS, bez závislostí). Otevřete `index.html` v prohlížeči.
 
-## Fotky
+## Stránky
+| Soubor | Obsah |
+|---|---|
+| `index.html` | Domů – úvod, náš příběh, „Zavřete oči“, rozcestník, kontakt v kostce |
+| `menu.html` | Menu se záložkami (Káva / Snídaně / Nápoje / Sladké) a doporučením baristy |
+| `galerie.html` | Galerie fotek se zvětšením po kliknutí |
+| `poukazy.html` | Dárkové poukazy + jak na to |
+| `kontakt.html` | Adresa, otevírací doba, mapa, jak to u nás chodí |
 
-Nahrajte fotky do `assets/img/` pod těmito názvy. Dokud tam nejsou, zobrazí se náhradní ilustrace.
-
-| Soubor | Fotka | Kde je použita |
-|---|---|---|
-| `podnos.jpg` | dřevěný podnos s logem, dezerty, drink | koláž v sekci „Náš příběh“ |
-| `kava-tulipany.jpg` | černá káva v dlaních + tulipány | pozadí sekce „Zavřete oči“ + galerie |
-| `prelevani.jpg` | přelévání filtru, dřevo v pozadí | menu – karta Káva |
-| `melounove-drinky.jpg` | melounové limonády s levandulí | galerie |
-| `kolace.jpg` | koláče + fíkový koláč, svíčka | menu – karta Sladké + galerie |
-| `drinky-podloubi.jpg` | dva drinky v podloubí | sekce Návštěva |
-| `croissant-medvidek.jpg` | latte medvídek + croissant | galerie |
-| `dyne-latte.jpg` | latte art dýně | galerie |
-| `snidane.jpg` | snídaně na dřevěném stole | galerie |
-| `liska.jpg` | medvídek v latte + lištička | galerie |
-| `podzim-dobroty.jpg` | pumpkin latte + skořicové dobroty | galerie |
-| `rosetta.jpg` | rosetta v dlaních | galerie |
-| `zajic.jpg` | zajíček, narcisy, cappuccino | galerie |
-| `banana-bread.jpg` | banana bread + dýně | galerie |
-| `snehulak.jpg` | sněhulák v latte + srdce ve sněhu | galerie |
-
-Všechny fotky jsou nahrané. Galerie automaticky zobrazí jen fotky, které ve složce existují, takže novou fotku stačí přidat do `assets/img/` a doplnit do galerie v `index.html`.
-
-Galerie automaticky zobrazí jen fotky, které ve složce existují – stačí nahrát soubor se správným názvem.
-
-`latte-logs.png` a `latte-polena.jpg` (úvodní kruhová fotka) jsou vyříznuté z Facebook profilu (nízké rozlišení), ideálně nahradit originály.
+Společné styly a skripty jsou v `assets/styles.css` a `assets/main.js`, fotky v `assets/img/`.
 
 ## Ověřit s majitelkou
-- otevírací doba (zatím ukázková), přesná adresa, ceny v menu (ukázkové)
+- otevírací doba (zatím ukázková – v HTML i v `assets/main.js`), přesná adresa
+- ceny a položky v menu (ukázkové)
 - odkaz na Facebook / Messenger
+- originál profilové fotky latte na polenech (`latte-polena.jpg` je výřez ze screenshotu)

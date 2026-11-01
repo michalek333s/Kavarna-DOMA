@@ -6,170 +6,80 @@
   <title>Kavárna DOMA · Nový Jičín</title>
   <meta name="description" content="Kavárna DOMA – výběrová káva v centru Nového Jičína. Zavřete oči a vychutnejte si vůni výběrové kávy.">
   <meta name="theme-color" content="#F5EDE2">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232A1C15'/%3E%3Cpath d='M22 30c0-4 4-8 10-12 6 4 10 8 10 12' fill='none' stroke='%23E6B98A' stroke-width='3.5' stroke-linecap='round'/%3E%3Cpath d='M20 30h24v6a12 12 0 0 1-24 0z' fill='%23E6B98A'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232A1C15'/%3E%3Cpath d='M18 28h24v7a12 12 0 0 1-24 0z' fill='%23E6B98A'/%3E%3Cpath d='M28 22s-4-2.4-4-5a2.2 2.2 0 0 1 4-1 2.2 2.2 0 0 1 4 1c0 2.6-4 5-4 5z' fill='%23E6B98A'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,100;1,9..144,300..700,100&family=Instrument+Sans:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-
 <div class="grain" aria-hidden="true"></div>
 
-<!-- ───────────── NAV ───────────── -->
 <header class="nav" id="nav">
-  <a href="#top" class="brand" aria-label="Kavárna DOMA – úvod">
+  <a href="index.html" class="brand" aria-label="Kavárna DOMA – domů">
     <span class="brand__mark" aria-hidden="true">
       <svg viewBox="0 0 40 40"><path d="M17 12.5s-3-1.8-3-3.7a1.6 1.6 0 0 1 3-.7 1.6 1.6 0 0 1 3 .7c0 1.9-3 3.7-3 3.7z" fill="currentColor"/><path d="M9 17h17v5.5a8.5 8.5 0 0 1-17 0z" fill="currentColor"/><path d="M26 19h1.6a3.2 3.2 0 0 1 0 6.4H25" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 33h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </span>
     <span class="brand__name"><span class="brand__script">Doma</span><span class="brand__sub">kavárna</span></span>
   </a>
   <nav class="nav__links" aria-label="Hlavní menu">
-    <a href="#pribeh">Náš příběh</a>
-    <a href="#menu">Menu</a>
-    <a href="#atmosfera">Atmosféra</a>
-    <a href="#poukaz">Poukazy</a>
-    <a href="#navsteva">Návštěva</a>
+    <a href="menu.html">Menu</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="poukazy.html">Poukazy</a>
+    <a href="kontakt.html">Kontakt</a>
   </nav>
-  <a class="btn btn--small btn--dark nav__cta" href="tel:+420736445516">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
-    736 445 516
-  </a>
+  <a class="btn btn--small btn--dark nav__cta" href="tel:+420736445516"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg> 736 445 516</a>
   <button class="nav__burger" aria-label="Otevřít menu" aria-expanded="false"><span></span><span></span></button>
 </header>
 
 <div class="drawer" id="drawer" aria-hidden="true">
-  <a href="#pribeh">Náš příběh</a>
-  <a href="#menu">Menu</a>
-  <a href="#atmosfera">Atmosféra</a>
-  <a href="#poukaz">Poukazy</a>
-  <a href="#navsteva">Návštěva</a>
+  <a href="index.html" aria-current="page">Domů</a>
+  <a href="menu.html">Menu</a>
+  <a href="galerie.html">Galerie</a>
+  <a href="poukazy.html">Poukazy</a>
+  <a href="kontakt.html">Kontakt</a>
   <a class="btn btn--dark" href="tel:+420736445516">Zavolat · 736 445 516</a>
 </div>
 
-<main id="top">
+<main>
 
-<!-- ───────────── HERO ───────────── -->
 <section class="hero">
-  <div class="hero__glow" aria-hidden="true"></div>
-
   <div class="hero__text">
-    <p class="eyebrow reveal"><span class="dot"></span> Výběrová káva · centrum Nového Jičína</p>
-    <h1 class="hero__title">
-      <span class="line"><span>Káva, která</span></span>
-      <span class="line"><span>chutná jako</span></span>
-      <span class="line"><span><em>doma.</em><svg class="heart" viewBox="0 0 40 36" aria-hidden="true"><path d="M20 34S2 23 2 11.5A9.5 9.5 0 0 1 20 7a9.5 9.5 0 0 1 18 4.5C38 23 20 34 20 34z"/></svg></span></span>
-    </h1>
-    <p class="hero__lead reveal">Vítáme Vás v naší kavárně. Usaďte se, zavřete oči a&nbsp;vychutnejte si vůni výběrové kávy&nbsp;— bez spěchu, jako u&nbsp;sebe v obýváku.</p>
-    <div class="hero__actions reveal">
-      <a href="#menu" class="btn btn--dark">Prohlédnout menu
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="#navsteva" class="btn btn--ghost">Kde nás najdete</a>
+    <p class="open-badge hero-in" style="--d:.05s"><span class="pulse"></span><span data-open-state>Dnes pro Vás otevřeno</span></p>
+    <h1 class="hero__title hero-in" style="--d:.12s">Vítáme Vás <em>doma.</em></h1>
+    <p class="hero__lead hero-in" style="--d:.2s">Jsme malá kavárna v&nbsp;centru Nového Jičína. Zavřete oči a&nbsp;vychutnejte si vůni výběrové kávy, domácí koláč a&nbsp;chvilku jen pro sebe.</p>
+    <div class="hero__actions hero-in" style="--d:.28s">
+      <a href="menu.html" class="btn btn--dark">Prohlédnout menu <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="kontakt.html" class="btn btn--ghost">Kde nás najdete</a>
     </div>
-    <div class="hero__meta reveal">
-      <div><strong data-count="3100">3 100</strong><span>přátel na Facebooku</span></div>
-      <div><strong>100%</strong><span>výběrová zrna</span></div>
-      <div class="open-badge"><span class="pulse"></span><span id="openState">Dnes pro Vás otevřeno</span></div>
-    </div>
+    <p class="hero__sign hero-in" style="--d:.36s">Těšíme se na Vás&nbsp;— Vaše DOMA&nbsp;♥</p>
   </div>
-
-  <div class="hero__visual">
-    <div class="photo-orb reveal-scale">
-      <svg class="ring" viewBox="0 0 300 300" aria-hidden="true">
-        <defs><path id="circ" d="M150,150 m-128,0 a128,128 0 1,1 256,0 a128,128 0 1,1 -256,0"/></defs>
-        <text><textPath href="#circ">VÝBĚROVÁ KÁVA ✦ NOVÝ JIČÍN ✦ JAKO DOMA ✦ S LÁSKOU ✦ </textPath></text>
-      </svg>
-      <div class="photo-orb__img" data-parallax="0.06">
-        <img src="assets/img/latte-logs.png" alt="Latte art v keramickém hrnku na polenech dřeva" width="640" height="640">
-      </div>
-      <svg class="steam" viewBox="0 0 120 160" aria-hidden="true">
-        <path d="M30 150c-18-30 18-40 0-70s18-40 0-70"/>
-        <path d="M60 150c-18-30 18-40 0-70s18-40 0-70"/>
-        <path d="M90 150c-18-30 18-40 0-70s18-40 0-70"/>
-      </svg>
-    </div>
-
-    <div class="note note--hero reveal" style="--d:.9s">
-      <span>Zavřete oči&nbsp;…</span>
-      <svg viewBox="0 0 120 60" aria-hidden="true"><path d="M4 8c30 4 60 18 92 42m0 0-14-2m14 2-3-14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
-
-    <div class="sticker sticker--tulip reveal" style="--d:1.1s" aria-hidden="true">
-      <svg viewBox="0 0 80 120">
-        <path d="M40 118V58" stroke="#6F8460" stroke-width="4" stroke-linecap="round"/>
-        <path d="M40 92c-14-4-24-16-26-30 14 2 24 12 26 30zM40 84c10-6 22-8 30-4-6 10-18 12-30 4z" fill="#7E9470"/>
-        <path d="M22 26c0 20 8 34 18 34s18-14 18-34l-9 9-9-15-9 15z" fill="#D9472F"/>
-        <path d="M31 35l9-15 9 15c-2 12-5 22-9 25-4-3-7-13-9-25z" fill="#EFA23A"/>
-      </svg>
-    </div>
+  <div class="hero__photos">
+    <figure class="hero__main hero-photo">
+      <img src="assets/img/liska.jpg" alt="Latte s medvídkem v pěně vedle spící lištičky u proutěného koše" width="1050" height="1400" fetchpriority="high">
+    </figure>
+    <figure class="hero__pol hero-photo" style="--d:.35s">
+      <img src="assets/img/kava-tulipany.jpg" alt="Černá káva v dlaních a kytice tulipánů" width="909" height="960">
+      <figcaption>ranní káva s&nbsp;tulipány</figcaption>
+    </figure>
   </div>
-
-  <a href="#pribeh" class="scroll-cue" aria-label="Posunout dolů"><span></span></a>
 </section>
 
-<!-- ───────────── MARQUEE ───────────── -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    <span>výběrová káva</span><i>✦</i><span>domácí dezerty</span><i>✦</i><span>espresso &amp; filtr</span><i>✦</i><span>klidné místo v centru</span><i>✦</i><span>káva s sebou</span><i>✦</i><span>vůně, která hřeje</span><i>✦</i>
-    <span>výběrová káva</span><i>✦</i><span>domácí dezerty</span><i>✦</i><span>espresso &amp; filtr</span><i>✦</i><span>klidné místo v centru</span><i>✦</i><span>káva s sebou</span><i>✦</i><span>vůně, která hřeje</span><i>✦</i>
-  </div>
-</div>
-
-<!-- ───────────── PŘÍBĚH ───────────── -->
 <section class="story" id="pribeh">
-  <div class="story__head">
+  <div class="story__text">
     <p class="eyebrow reveal">Náš příběh</p>
     <h2 class="h2 reveal">Proč <em>DOMA</em>?</h2>
+    <p class="big reveal">Protože nejlepší káva není ta nejdražší. Je to ta, u&nbsp;které se na chvíli zastavíte.</p>
+    <p class="reveal">Chtěli jsme místo, kam se lidé vracejí rádi&nbsp;— jako domů. Kde Vás pozdravíme s&nbsp;úsměvem, kde voní čerstvě namletá zrna a&nbsp;kde si můžete v&nbsp;klidu sednout s&nbsp;knížkou, kamarádkou nebo jen sami se sebou.</p>
+    <p class="reveal">Každé latte zdobíme s&nbsp;láskou&nbsp;— někdy srdíčkem, jindy medvídkem. Koláče pečeme podle sezóny a&nbsp;kavárnu zdobíme tím, co zrovna kvete.</p>
+    <p class="sign reveal">— s&nbsp;láskou, Vaše DOMA</p>
   </div>
-  <div class="story__grid">
-    <div class="story__lead reveal">
-      <p class="big">Protože nejlepší káva není ta nejdražší. Je to ta, u&nbsp;které se na chvíli zastavíte.</p>
-      <p>Chtěli jsme místo, kam se lidé vracejí rádi&nbsp;— jako domů. Kde Vás pozdravíme jménem, kde voní čerstvě namletá zrna a kde si můžete v klidu sednout s&nbsp;knížkou, kamarádkou nebo jen sami se sebou.</p>
-      <p class="sign">— s&nbsp;láskou, Vaše DOMA</p>
-    </div>
-    <ul class="values">
-      <li class="value reveal" style="--d:.05s">
-        <span class="value__icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="12" ry="18" transform="rotate(30 24 24)" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15 34c6-4 12-16 18-20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-        </span>
-        <h3>Výběrová káva</h3>
-        <p>Pečlivě vybraná zrna od pražíren, kterým věříme. Každý šálek připravujeme s&nbsp;citem.</p>
-      </li>
-      <li class="value reveal" style="--d:.15s">
-        <span class="value__icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48"><path d="M8 22 24 9l16 13v17a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 35s-7-4.2-7-8.6a3.6 3.6 0 0 1 7-1.4 3.6 3.6 0 0 1 7 1.4C31 30.8 24 35 24 35z" fill="currentColor"/></svg>
-        </span>
-        <h3>Atmosféra domova</h3>
-        <p>Dřevo, teplé světlo, deky a květiny na stole. Místo, kde se zpomalí i&nbsp;pondělí.</p>
-      </li>
-      <li class="value reveal" style="--d:.25s">
-        <span class="value__icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48"><path d="M24 43s14-12.6 14-24a14 14 0 0 0-28 0c0 11.4 14 24 14 24z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="19" r="5" fill="currentColor"/></svg>
-        </span>
-        <h3>V srdci města</h3>
-        <p>Najdete nás v centru Nového Jičína&nbsp;— ideální zastávka na procházce nebo cestou do práce.</p>
-      </li>
-    </ul>
-  </div>
-  <div class="story__photos">
-    <figure class="sp sp--main reveal">
-      <div class="sp__img art-cake"><img src="assets/img/dve-latte.jpg" alt="Dvě latte s medvídkem a opičkou v dlaních nad kvetoucí hortenzií" loading="lazy" onerror="this.style.visibility='hidden'"></div>
-    </figure>
-    <figure class="sp sp--side reveal" style="--d:.15s">
-      <div class="sp__img art-window"><img src="assets/img/podnos.jpg" alt="Dřevěný podnos s logem Kavárny DOMA, latte, dezerty a drink" loading="lazy" onerror="this.style.visibility='hidden'"></div>
-    </figure>
-    <figcaption class="story__photo-note reveal" style="--d:.3s"><span>každé latte s&nbsp;úsměvem</span>
-      <svg viewBox="0 0 120 60" aria-hidden="true"><path d="M4 8c30 4 60 18 92 42m0 0-14-2m14 2-3-14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </figcaption>
-    <div class="sp__badge reveal" style="--d:.45s" aria-hidden="true">
-      <svg viewBox="0 0 120 120"><defs><path id="bc" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><text><textPath href="#bc">LATTE ART ✦ S LÁSKOU ✦ DOMA ✦ </textPath></text></svg>
-      <span>♥</span>
-    </div>
+  <div class="collage reveal" style="--d:.1s">
+    <figure class="collage__main"><img src="assets/img/dve-latte.jpg" alt="Dvě latte s medvídkem a opičkou v dlaních nad kvetoucí hortenzií" loading="lazy"></figure>
+    <figure class="collage__side"><img src="assets/img/podnos.jpg" alt="Dřevěný podnos s logem Kavárny DOMA, latte, dezerty a drink" loading="lazy"><figcaption>každé latte s&nbsp;úsměvem</figcaption></figure>
   </div>
 </section>
 
-<!-- ───────────── SENZORICKÁ SEKCE ───────────── -->
 <section class="senses" aria-label="Zavřete oči">
   <div class="senses__bg" data-parallax="-0.08" style="background-image:url(assets/img/kava-tulipany.jpg)"></div>
   <div class="senses__inner">
@@ -178,174 +88,38 @@
   </div>
 </section>
 
-<!-- ───────────── MENU ───────────── -->
-<section class="menu" id="menu">
-  <div class="menu__head">
-    <div>
-      <p class="eyebrow reveal">Co pro Vás připravujeme</p>
-      <h2 class="h2 reveal">Naše <em>menu</em></h2>
-    </div>
-    <div class="tabs reveal" role="tablist" aria-label="Kategorie menu">
-      <button role="tab" aria-selected="true" data-tab="kava">Káva</button>
-      <button role="tab" aria-selected="false" data-tab="snidane">Snídaně</button>
-      <button role="tab" aria-selected="false" data-tab="napoje">Nápoje</button>
-      <button role="tab" aria-selected="false" data-tab="sladke">Sladké</button>
-      <span class="tabs__pill" aria-hidden="true"></span>
-    </div>
+<section class="explore">
+  <div class="explore__head">
+    <p class="eyebrow reveal">Zastavte se u nás</p>
+    <h2 class="h2 reveal">Na co se <em>můžete těšit</em></h2>
   </div>
-
-  <div class="menu__body">
-    <div class="menu__panel is-active" data-panel="kava" role="tabpanel">
-      <ul class="items">
-        <li><div><h4>Espresso</h4><p>Krátké, intenzivní, poctivé.</p></div><span class="lead"></span><b>55 Kč</b></li>
-        <li><div><h4>Cappuccino</h4><p>Hedvábné mléko, latte art s&nbsp;láskou.</p></div><span class="lead"></span><b>75 Kč</b></li>
-        <li><div><h4>Flat white</h4><p>Dvojité espresso, jemná mléčná pěna.</p></div><span class="lead"></span><b>85 Kč</b></li>
-        <li><div><h4>Caffè latte</h4><p>Jemné a krémové, na dlouhé povídání.</p></div><span class="lead"></span><b>85 Kč</b></li>
-        <li><div><h4>Filtrovaná káva</h4><p>V60 nebo batch brew z&nbsp;aktuální výběrovky.</p></div><span class="lead"></span><b>70 Kč</b></li>
-        <li><div><h4>Espresso tonic <span class="tag">sezónně</span></h4><p>Osvěžující kombinace na teplé dny.</p></div><span class="lead"></span><b>89 Kč</b></li>
-      </ul>
-    </div>
-    <div class="menu__panel" data-panel="snidane" role="tabpanel" hidden>
-      <ul class="items">
-        <li><div><h4>Croissant sendvič <span class="tag">oblíbené</span></h4><p>Máslový croissant, šunka, mozzarella, rajče a&nbsp;pesto.</p></div><span class="lead"></span><b>129 Kč</b></li>
-        <li><div><h4>Máslový croissant</h4><p>Křupavý, jednoduše dokonalý.</p></div><span class="lead"></span><b>55 Kč</b></li>
-        <li><div><h4>Snídaňové menu</h4><p>Sendvič, latte a&nbsp;fresh džus&nbsp;— ráno jako doma.</p></div><span class="lead"></span><b>199 Kč</b></li>
-        <li><div><h4>Fresh pomerančový džus</h4><p>Čerstvě vymačkaný.</p></div><span class="lead"></span><b>69 Kč</b></li>
-      </ul>
-    </div>
-    <div class="menu__panel" data-panel="napoje" role="tabpanel" hidden>
-      <ul class="items">
-        <li><div><h4>Ledové latte</h4><p>Espresso, studené mléko, hodně ledu.</p></div><span class="lead"></span><b>89 Kč</b></li>
-        <li><div><h4>Karamelové frappé <span class="tag">léto</span></h4><p>Se šlehačkou a&nbsp;slaným karamelem.</p></div><span class="lead"></span><b>109 Kč</b></li>
-        <li><div><h4>Horká čokoláda</h4><p>Hustá, poctivá, jako od babičky.</p></div><span class="lead"></span><b>79 Kč</b></li>
-        <li><div><h4>Chai latte</h4><p>Kořeněné, hřejivé, pohlazení na duši.</p></div><span class="lead"></span><b>85 Kč</b></li>
-        <li><div><h4>Matcha latte</h4><p>Japonský zelený čaj s&nbsp;mlékem.</p></div><span class="lead"></span><b>89 Kč</b></li>
-                <li><div><h4>Melounová limonáda</h4><p>S&nbsp;pomerančem, mátou a&nbsp;ledem.</p></div><span class="lead"></span><b>79 Kč</b></li>
-      </ul>
-    </div>
-    <div class="menu__panel" data-panel="sladke" role="tabpanel" hidden>
-      <ul class="items">
-        <li><div><h4>Dort dne</h4><p>Zeptejte se, co dnes voní z&nbsp;vitríny.</p></div><span class="lead"></span><b>od 79 Kč</b></li>
-        <li><div><h4>Cheesecake</h4><p>Krémový, s&nbsp;ovocem podle sezóny.</p></div><span class="lead"></span><b>89 Kč</b></li>
-        <li><div><h4>Domácí koláče</h4><p>Tvarohové, povidlové, podle dne.</p></div><span class="lead"></span><b>45 Kč</b></li>
-        <li><div><h4>Makronky</h4><p>Barevné, křehké, i&nbsp;jako dárek.</p></div><span class="lead"></span><b>35 Kč</b></li>
-        <li><div><h4>Banana bread</h4><p>Domácí, s&nbsp;ořechy a kapkou skořice.</p></div><span class="lead"></span><b>65 Kč</b></li>
-      </ul>
-    </div>
-
-    <aside class="menu__card reveal" aria-live="polite">
-      <div class="menu__card-photo art-window">
-        <img id="cardImg" src="assets/img/prelevani.jpg" alt="Přelévaná filtrovaná káva na pozadí naskládaného dřeva" onerror="this.style.visibility='hidden'">
-        <span class="menu__card-label">Doporučení baristy</span>
-      </div>
-      <div class="menu__card-body">
-        <h3 id="cardTitle">Filtr z&nbsp;výběrovky měsíce</h3>
-        <p id="cardText">Zeptejte se nás na aktuální zrno&nbsp;— rádi Vám povíme, odkud pochází a&nbsp;proč nás tak baví.</p>
-        <p class="hand" id="cardHand">a k&nbsp;tomu perníček ♥</p>
-      </div>
-    </aside>
-  </div>
-  <p class="menu__note">Nabídka a ceny jsou orientační a mohou se měnit podle sezóny.</p>
-</section>
-
-<!-- ───────────── ATMOSFÉRA ───────────── -->
-<section class="atmo" id="atmosfera">
-  <div class="atmo__head">
-    <p class="eyebrow reveal">Atmosféra</p>
-    <h2 class="h2 reveal">Malé radosti <em>všedního dne</em></h2>
-    <p class="atmo__sub reveal">Sledujte nás na Facebooku&nbsp;— každý den tam sdílíme kousek naší kavárny.</p>
-  </div>
-
-  <div class="drift reveal">
-    <div class="drift__row"><div class="drift__track">
-      <figure class="pol" style="--r:-3deg"><div class="pol__img art-cake"><img src="assets/img/latte-polena.jpg" alt="Latte s medvídkem na polenech" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>zimní latte ❄</figcaption></figure>
-      <figure class="pol" style="--r:2deg"><div class="pol__img art-window"><img src="assets/img/croissant-medvidek.jpg" alt="Latte s medvídkem a croissant v ruce" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>croissant &amp; medvídek</figcaption></figure>
-      <figure class="pol" style="--r:-2deg"><div class="pol__img art-tulips"><img src="assets/img/dyne-latte.jpg" alt="Latte art dýně v keramickém hrnku" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>dýňová sezóna 🎃</figcaption></figure>
-      <figure class="pol" style="--r:3deg"><div class="pol__img art-snow"><img src="assets/img/kolace.jpg" alt="Domácí koláče a fíkový koláč při svíčce" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>koláče jako od babičky</figcaption></figure>
-      <figure class="pol" style="--r:-4deg"><div class="pol__img art-cake"><img src="assets/img/kava-tulipany.jpg" alt="Černá káva v dlaních a kytice tulipánů" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>káva &amp; tulipány</figcaption></figure>
-      <figure class="pol" style="--r:2deg"><div class="pol__img art-window"><img src="assets/img/snidane.jpg" alt="Snídaně na dřevěném stole s croissanty a latte" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>snídaně venku</figcaption></figure>
-      <figure class="pol" style="--r:3deg"><div class="pol__img art-window"><img src="assets/img/ledova-kava.jpg" alt="Ledové latte a karamelové frappé" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>ledová káva</figcaption></figure>
-      <figure class="pol" style="--r:-3deg"><div class="pol__img art-tulips"><img src="assets/img/melounove-drinky.jpg" alt="Melounové limonády mezi levandulí" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>léto ve sklenici</figcaption></figure>
-    </div></div>
-    <div class="drift__row drift__row--rev"><div class="drift__track">
-      <figure class="pol" style="--r:3deg"><div class="pol__img art-window"><img src="assets/img/liska.jpg" alt="Latte art medvídek vedle spící lištičky" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>medvídek &amp; liška</figcaption></figure>
-      <figure class="pol" style="--r:-2deg"><div class="pol__img art-tulips"><img src="assets/img/podzim-dobroty.jpg" alt="Pumpkin spice latte a skořicové dobroty" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>podzim na talíři</figcaption></figure>
-      <figure class="pol" style="--r:2deg"><div class="pol__img art-snow"><img src="assets/img/rosetta.jpg" alt="Cappuccino s rosettou v dlaních" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>rosetta s láskou</figcaption></figure>
-      <figure class="pol" style="--r:-3deg"><div class="pol__img art-cake"><img src="assets/img/zajic.jpg" alt="Cappuccino, keramický zajíček a narcisy" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>jaro u nás</figcaption></figure>
-      <figure class="pol" style="--r:3deg"><div class="pol__img art-window"><img src="assets/img/banana-bread.jpg" alt="Domácí banana bread a latte vedle dýně" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>banana bread</figcaption></figure>
-      <figure class="pol" style="--r:-2deg"><div class="pol__img art-tulips"><img src="assets/img/snehulak.jpg" alt="Latte se sněhulákem a srdce ve sněhu" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>srdce ze sněhu</figcaption></figure>
-      <figure class="pol" style="--r:2deg"><div class="pol__img art-cake"><img src="assets/img/snidane-croissant.jpg" alt="Croissant sendvič, latte a džus" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>dobré ráno ☀</figcaption></figure>
-      <figure class="pol" style="--r:-2deg"><div class="pol__img art-window"><img src="assets/img/podnos.jpg" alt="Podnos s logem DOMA, latte a dezerty" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption>s láskou z DOMA</figcaption></figure>
-    </div></div>
-  </div>
-
-  <div class="atmo__cta reveal">
-    <a class="btn btn--dark" href="https://www.facebook.com/search/top?q=Kav%C3%A1rna%20DOMA%20Nov%C3%BD%20Ji%C4%8D%C3%ADn" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.5-1 .9-1H17V2.1L14 2c-3.3 0-4 2.4-4 4v2.5H8V12h2v10h4V12h2.7l.4-3.5z" fill="currentColor"/></svg>
-      Kavárna DOMA na Facebooku
+  <div class="explore__grid">
+    <a class="ecard reveal" href="menu.html">
+      <img src="assets/img/prelevani.jpg" alt="" loading="lazy">
+      <span class="ecard__body"><span class="ecard__kicker">Menu</span><span class="ecard__title">Káva, snídaně a&nbsp;domácí dobroty</span><span class="ecard__go">Prohlédnout <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+    </a>
+    <a class="ecard reveal" style="--d:.1s" href="poukazy.html">
+      <img src="assets/img/poukaz.jpg" alt="" loading="lazy">
+      <span class="ecard__body"><span class="ecard__kicker">Dárkové poukazy</span><span class="ecard__title">Darujte chvilku DOMA</span><span class="ecard__go">Jak na to <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+    </a>
+    <a class="ecard reveal" style="--d:.2s" href="galerie.html">
+      <img src="assets/img/dyne-latte.jpg" alt="" loading="lazy">
+      <span class="ecard__body"><span class="ecard__kicker">Galerie</span><span class="ecard__title">Nahlédněte k&nbsp;nám</span><span class="ecard__go">Fotky <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
     </a>
   </div>
 </section>
 
-<!-- ───────────── SLUŽBY ───────────── -->
-<section class="services">
-  <div class="service reveal">
-    <span class="service__num">01</span>
-    <h3>Posezení u nás</h3>
-    <p>Usaďte se na chvíli nebo na celé odpoledne. Nikdo Vás nevyhání.</p>
-  </div>
-  <div class="service reveal" style="--d:.1s">
-    <span class="service__num">02</span>
-    <h3>Káva s sebou</h3>
-    <p>Spěcháte? Připravíme Vám kávu do kelímku&nbsp;— klidně do Vašeho vlastního.</p>
-  </div>
-  <div class="service reveal" style="--d:.2s">
-    <span class="service__num">03</span>
-    <h3>Vyzvednutí na místě</h3>
-    <p>Objednejte si telefonicky nebo přes Messenger a vyzvedněte si v kavárně.</p>
-  </div>
-  <div class="service reveal" style="--d:.3s">
-    <span class="service__num">04</span>
-    <h3>Dárkové poukazy</h3>
-    <p>Darujte chvilku v&nbsp;DOMA&nbsp;— poukaz zabalíme s&nbsp;láskou.</p>
-  </div>
-</section>
-
-<!-- ───────────── POUKAZ ───────────── -->
-<section class="gift" id="poukaz">
-  <div class="gift__photo reveal">
-    <div class="gift__img"><img src="assets/img/poukaz.jpg" alt="Dárkový poukaz Kavárny DOMA, latte s medvídkem a makronky s poděkováním" loading="lazy"></div>
-    <span class="gift__tag" aria-hidden="true">Děkuji ♥</span>
-  </div>
-  <div class="gift__text">
-    <p class="eyebrow reveal">Dárek, který zahřeje</p>
-    <h2 class="h2 reveal">Darujte chvilku <em>DOMA</em></h2>
-    <p class="gift__lead reveal">Nevíte, čím udělat radost? Dárkový poukaz do naší kavárny potěší každého, kdo má rád dobrou kávu a&nbsp;klid. Hodnotu zvolíte sami, my ho zabalíme do obálky s&nbsp;medvídkem&nbsp;— a když budete chtít, přidáme i&nbsp;krabičku makronek.</p>
-    <ul class="gift__list reveal">
-      <li><span>☕</span>Hodnota podle Vašeho přání</li>
-      <li><span>✉</span>Zabalený v&nbsp;dárkové obálce</li>
-      <li><span>♥</span>Ideální k&nbsp;narozeninám, Vánocům i&nbsp;jen tak</li>
-    </ul>
-    <div class="hero__actions reveal">
-      <a class="btn btn--dark" href="tel:+420736445516">Objednat poukaz
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a class="btn btn--ghost" href="#navsteva">Vyzvednout v&nbsp;kavárně</a>
+<section class="band">
+  <div class="visit__card band__card reveal">
+    <div class="band__intro">
+      <p class="eyebrow eyebrow--light">Přijďte k nám</p>
+      <h2 class="h2 h2--light">Těšíme se na Vás <em>doma.</em></h2>
     </div>
-  </div>
-</section>
-
-<!-- ───────────── NÁVŠTĚVA ───────────── -->
-<section class="visit" id="navsteva">
-  <div class="visit__card reveal">
-    <p class="eyebrow eyebrow--light">Přijďte k nám</p>
-    <h2 class="h2 h2--light">Těšíme se na Vás <em>doma.</em></h2>
-
     <div class="visit__grid">
       <div>
         <h4>Kde nás najdete</h4>
-        <p>Kavárna DOMA<br>centrum Nového Jičína<br>741 01 Nový Jičín</p>
-        <a class="link" href="https://maps.google.com/?q=Kav%C3%A1rna+DOMA+Nov%C3%BD+Ji%C4%8D%C3%ADn" target="_blank" rel="noopener">Navigovat →</a>
+        <p>Kavárna DOMA<br>centrum Nového Jičína</p>
+        <a class="link" href="kontakt.html">Mapa a kontakt →</a>
       </div>
       <div>
         <h4>Otevírací doba</h4>
@@ -356,37 +130,43 @@
         </ul>
       </div>
       <div>
-        <h4>Kontakt</h4>
+        <h4>Zavolejte nám</h4>
         <a class="phone" href="tel:+420736445516">736 445 516</a>
-        <a class="link" href="https://m.me/" target="_blank" rel="noopener">Napsat na Messenger →</a>
       </div>
     </div>
-  </div>
-  <div class="visit__side">
-  <figure class="visit__photo reveal art-window" style="--d:.1s">
-    <img src="assets/img/drinky-podloubi.jpg" alt="Přípitek dvěma drinky v podloubí Nového Jičína" loading="lazy" onerror="this.style.visibility='hidden'">
-    <figcaption>na skok od náměstí ☀</figcaption>
-  </figure>
-  <div class="visit__map reveal" style="--d:.15s">
-    <iframe title="Mapa – Kavárna DOMA Nový Jičín" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-      src="https://maps.google.com/maps?q=Kav%C3%A1rna%20DOMA%20Nov%C3%BD%20Ji%C4%8D%C3%ADn&z=16&output=embed"></iframe>
-    <div class="map-pin" aria-hidden="true">
-      <span>DOMA</span>
-    </div>
-  </div>
   </div>
 </section>
 
 </main>
 
-<!-- ───────────── FOOTER ───────────── -->
 <footer class="footer">
-  <p class="footer__big">Kavárna <em>DOMA</em></p>
-  <p class="footer__hand">Zavřete oči a vychutnejte si vůni výběrové kávy ☕</p>
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <p class="footer__logo">Doma</p>
+      <p class="footer__bio">Vítáme Vás v kavárně v centru Nového Jičína&nbsp;🤎<br>Zavřete oči a vychutnejte si vůni výběrové kávy&nbsp;☕</p>
+    </div>
+    <div>
+      <h4>Stránky</h4>
+      <ul>
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="poukazy.html">Poukazy</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+420736445516">736 445 516</a></li>
+        <li>centrum Nového Jičína</li>
+        <li><a href="https://www.facebook.com/search/top?q=Kav%C3%A1rna%20DOMA%20Nov%C3%BD%20Ji%C4%8D%C3%ADn" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="footer__row">
     <span>© <span id="year">2026</span> Kavárna DOMA · Nový Jičín</span>
-    <a href="tel:+420736445516">736 445 516</a>
-    <a href="#top">Zpět nahoru ↑</a>
+    <span class="footer__hand">s láskou ♥</span>
   </div>
 </footer>
 

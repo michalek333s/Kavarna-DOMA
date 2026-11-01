@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt · Kavárna DOMA</title>
+  <meta name="description" content="Adresa, otevírací doba a kontakt na Kavárnu DOMA v Novém Jičíně.">
+  <meta name="theme-color" content="#F5EDE2">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232A1C15'/%3E%3Cpath d='M18 28h24v7a12 12 0 0 1-24 0z' fill='%23E6B98A'/%3E%3Cpath d='M28 22s-4-2.4-4-5a2.2 2.2 0 0 1 4-1 2.2 2.2 0 0 1 4 1c0 2.6-4 5-4 5z' fill='%23E6B98A'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,100;1,9..144,300..700,100&family=Instrument+Sans:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a href="index.html" class="brand" aria-label="Kavárna DOMA – domů">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40"><path d="M17 12.5s-3-1.8-3-3.7a1.6 1.6 0 0 1 3-.7 1.6 1.6 0 0 1 3 .7c0 1.9-3 3.7-3 3.7z" fill="currentColor"/><path d="M9 17h17v5.5a8.5 8.5 0 0 1-17 0z" fill="currentColor"/><path d="M26 19h1.6a3.2 3.2 0 0 1 0 6.4H25" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 33h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </span>
+    <span class="brand__name"><span class="brand__script">Doma</span><span class="brand__sub">kavárna</span></span>
+  </a>
+  <nav class="nav__links" aria-label="Hlavní menu">
+    <a href="menu.html">Menu</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="poukazy.html">Poukazy</a>
+    <a href="kontakt.html" aria-current="page">Kontakt</a>
+  </nav>
+  <a class="btn btn--small btn--dark nav__cta" href="tel:+420736445516"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg> 736 445 516</a>
+  <button class="nav__burger" aria-label="Otevřít menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <a href="index.html">Domů</a>
+  <a href="menu.html">Menu</a>
+  <a href="galerie.html">Galerie</a>
+  <a href="poukazy.html">Poukazy</a>
+  <a href="kontakt.html" aria-current="page">Kontakt</a>
+  <a class="btn btn--dark" href="tel:+420736445516">Zavolat · 736 445 516</a>
+</div>
+
+<main>
+<section class="visit page-first" id="navsteva">
+  <div class="visit__card reveal">
+    <p class="eyebrow eyebrow--light">Přijďte k nám</p>
+    <h1 class="h1 h2--light">Těšíme se na Vás <em>doma.</em></h1>
+
+    <div class="visit__grid">
+      <div>
+        <h4>Kde nás najdete</h4>
+        <p>Kavárna DOMA<br>centrum Nového Jičína<br>741 01 Nový Jičín</p>
+        <a class="link" href="https://maps.google.com/?q=Kav%C3%A1rna+DOMA+Nov%C3%BD+Ji%C4%8D%C3%ADn" target="_blank" rel="noopener">Navigovat →</a>
+      </div>
+      <div>
+        <h4>Otevírací doba</h4>
+        <ul class="hours" id="hours">
+          <li data-day="1"><span>Po – Pá</span><span>7:30 – 18:00</span></li>
+          <li data-day="6"><span>So</span><span>9:00 – 17:00</span></li>
+          <li data-day="0"><span>Ne</span><span>13:00 – 18:00</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a class="phone" href="tel:+420736445516">736 445 516</a>
+        <a class="link" href="https://m.me/" target="_blank" rel="noopener">Napsat na Messenger →</a>
+      </div>
+    </div>
+  </div>
+  <div class="visit__side">
+  <figure class="visit__photo reveal art-window" style="--d:.1s">
+    <img src="assets/img/drinky-podloubi.jpg" alt="Přípitek dvěma drinky v podloubí Nového Jičína" loading="lazy" onerror="this.style.visibility='hidden'">
+    <figcaption>na skok od náměstí ☀</figcaption>
+  </figure>
+  <div class="visit__map reveal" style="--d:.15s">
+    <iframe title="Mapa – Kavárna DOMA Nový Jičín" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://maps.google.com/maps?q=Kav%C3%A1rna%20DOMA%20Nov%C3%BD%20Ji%C4%8D%C3%ADn&z=16&output=embed"></iframe>
+    <div class="map-pin" aria-hidden="true">
+      <span>DOMA</span>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="services-wrap">
+  <h2 class="h2 reveal">Jak to u nás <em>chodí</em></h2>
+<div class="services">
+  <div class="service reveal">
+    <span class="service__num">01</span>
+    <h3>Posezení u nás</h3>
+    <p>Usaďte se na chvíli nebo na celé odpoledne. Nikdo Vás nevyhání.</p>
+  </div>
+  <div class="service reveal" style="--d:.1s">
+    <span class="service__num">02</span>
+    <h3>Káva s sebou</h3>
+    <p>Spěcháte? Připravíme Vám kávu do kelímku&nbsp;— klidně do Vašeho vlastního.</p>
+  </div>
+  <div class="service reveal" style="--d:.2s">
+    <span class="service__num">03</span>
+    <h3>Vyzvednutí na místě</h3>
+    <p>Objednejte si telefonicky nebo přes Messenger a vyzvedněte si v kavárně.</p>
+  </div>
+  <div class="service reveal" style="--d:.3s">
+    <span class="service__num">04</span>
+    <h3>Dárkové poukazy</h3>
+    <p>Darujte chvilku v&nbsp;DOMA&nbsp;— <a class="u" href="poukazy.html">více o&nbsp;poukazech</a>.</p>
+  </div>
+</div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <p class="footer__logo">Doma</p>
+      <p class="footer__bio">Vítáme Vás v kavárně v centru Nového Jičína&nbsp;🤎<br>Zavřete oči a vychutnejte si vůni výběrové kávy&nbsp;☕</p>
+    </div>
+    <div>
+      <h4>Stránky</h4>
+      <ul>
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="poukazy.html">Poukazy</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+420736445516">736 445 516</a></li>
+        <li>centrum Nového Jičína</li>
+        <li><a href="https://www.facebook.com/search/top?q=Kav%C3%A1rna%20DOMA%20Nov%C3%BD%20Ji%C4%8D%C3%ADn" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__row">
+    <span>© <span id="year">2026</span> Kavárna DOMA · Nový Jičín</span>
+    <span class="footer__hand">s láskou ♥</span>
+  </div>
+</footer>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>
