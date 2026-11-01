@@ -97,33 +97,52 @@
     else { addEventListener('scroll', () => requestAnimationFrame(light), { passive: true }); light(); }
   }
 
-  // menu tabs + barista card
+  // menu: tabs + every item shows its photo
   const tabs = $$('.tabs button');
   if (tabs.length) {
     const pill = $('.tabs__pill');
     const movePill = btn => { pill.style.width = btn.offsetWidth + 'px'; pill.style.transform = `translateX(${btn.offsetLeft}px)`; };
-    const cards = {
-      kava:    { img: 'prelevani.jpg', alt: 'Přelévaná filtrovaná káva na pozadí naskládaného dřeva', t: 'Přelévaná káva', p: 'Zeptejte se nás, jaké zrno máme zrovna na mlýnku\u00a0— rádi Vám o\u00a0něm povíme.', h: 'a k\u00a0tomu perníček ♥' },
-      snidane: { img: 'snidane-croissant.jpg', alt: 'Croissant sendvič, latte a pomerančový džus na podnosu s logem DOMA', t: 'Croissant sendvič', p: 'Křupavý croissant plný dobrot, k tomu latte a čerstvý džus. Takhle chutná dobré ráno.', h: 'snídaně jako doma ♥' },
-      sezona:  { img: 'dyne-latte.jpg', alt: 'Latte art dýně v keramickém hrnku', t: 'Co je zrovna v sezóně', p: 'V\u00a0létě káva na ledu a melounová limonáda, na podzim dýňové latte. Nabídka se mění s\u00a0ročním obdobím.', h: 'sledujte nás na Instagramu ♥' },
-      sladke:  { img: 'dort-cokomalina.jpg', alt: 'Čokomalina – čokoládový dort s malinovým želé', t: 'Oblíbená čokomalina', p: 'Čokoládový dort s\u00a0malinami, kvůli kterému se k\u00a0nám hosté vracejí. A\u00a0ve vitríně vždy najdete i\u00a0něco veganského.', h: 'dortíky pečeme s\u00a0láskou ♥' }
-    };
-    Object.values(cards).forEach(c => { new Image().src = 'assets/img/' + c.img; });
     const img = $('#cardImg'), body = $('.menu__card-body');
-    const swapCard = key => {
-      const c = cards[key];
+    const wide = matchMedia('(min-width: 641px)');
+    let current = null, swapT;
+    const showItem = li => {
+      if (!li || li === current) return;
+      $$('.item.is-active').forEach(x => x.classList.remove('is-active'));
+      li.classList.add('is-active'); current = li;
+      const name = li.querySelector('.item__name').cloneNode(true);
+      name.querySelectorAll('.tag').forEach(t => t.remove());
+      const src = 'assets/img/' + li.dataset.img;
+      new Image().src = src;
       img.classList.add('swap'); body.classList.add('swap');
-      setTimeout(() => {
-        img.src = 'assets/img/' + c.img; img.alt = c.alt;
-        $('#cardTitle').textContent = c.t; $('#cardText').textContent = c.p; $('#cardHand').textContent = c.h;
+      clearTimeout(swapT);
+      swapT = setTimeout(() => {
+        img.src = src; img.alt = li.dataset.alt;
+        $('#cardTitle').textContent = name.textContent.trim();
+        $('#cardText').textContent = li.querySelector('.item__desc').textContent;
+        $('#cardHand').textContent = li.dataset.hand;
         img.classList.remove('swap'); body.classList.remove('swap');
-      }, 380);
+      }, 260);
     };
+    $$('.item[data-img]').forEach(li => {
+      const btn = $('.item__btn', li);
+      if (matchMedia('(hover:hover)').matches) li.addEventListener('mouseenter', () => wide.matches && showItem(li));
+      btn.addEventListener('click', () => {
+        if (wide.matches) { showItem(li); return; }
+        const open = !li.classList.contains('is-open');
+        const ph = $('.item__photo', li);
+        if (open && !ph.firstChild) ph.innerHTML = `<img src="assets/img/${li.dataset.img}" alt="${li.dataset.alt}">`;
+        $$('.item.is-open').forEach(x => { if (x !== li) { x.classList.remove('is-open', 'is-active'); $('.item__btn', x).setAttribute('aria-expanded', 'false'); } });
+        li.classList.toggle('is-open', open); li.classList.toggle('is-active', open);
+        btn.setAttribute('aria-expanded', open);
+      });
+    });
     tabs.forEach(btn => btn.addEventListener('click', () => {
       tabs.forEach(b => b.setAttribute('aria-selected', b === btn));
       $$('.menu__panel').forEach(p => { const on = p.dataset.panel === btn.dataset.tab; p.hidden = !on; p.classList.toggle('is-active', on); });
-      movePill(btn); swapCard(btn.dataset.tab);
+      movePill(btn);
+      if (wide.matches) { current = null; showItem($(`.menu__panel[data-panel="${btn.dataset.tab}"] .item[data-img]`)); }
     }));
+    if (wide.matches) { const first = $('.menu__panel.is-active .item[data-img]'); first.classList.add('is-active'); current = first; }
     const syncPill = () => movePill(tabs.find(b => b.getAttribute('aria-selected') === 'true'));
     addEventListener('resize', syncPill);
     document.fonts?.ready.then(syncPill); syncPill();
@@ -144,18 +163,67 @@
     }
   });
 
-  // gallery lightbox
-  const lb = $('#lightbox');
-  if (lb) {
-    const items = $$('.gfig__btn');
-    let cur = 0;
-    const show = i => {
-      cur = (i + items.length) % items.length;
-      const im = $('img', items[cur]);
-      $('img', lb).src = im.src; $('img', lb).alt = im.alt;
-      $('figcaption', lb).textContent = items[cur].closest('figure').querySelector('figcaption').textContent;
+  // gallery: filters + lightbox
+  const bento = $('#bento');
+  if (bento) {
+    const figsAll = $$('.gfig', bento);
+    const stagger = () => figsAll.filter(f => !f.hidden).forEach((f, i) => {
+      f.style.setProperty('--gd', Math.min(i, 10) * 0.04 + 's');
+      f.style.animation = 'none'; f.offsetWidth; f.style.animation = '';
+    });
+    // stretch photos in the last row so a filtered grid never ends with gaps
+    const measure = () => {
+      const cs = getComputedStyle(bento), cols = cs.gridTemplateColumns.split(' ').length;
+      const gap = parseFloat(cs.rowGap), rh = parseFloat(cs.gridAutoRows);
+      const gb = bento.getBoundingClientRect(), cw = (gb.width + gap) / cols;
+      const occ = new Set(); let rows = 0;
+      const vis = figsAll.filter(f => !f.hidden);
+      vis.forEach(f => {
+        const r = f.getBoundingClientRect();
+        const c0 = Math.round((r.left - gb.left) / cw), cs_ = Math.round((r.width + gap) / cw);
+        const r0 = Math.round((r.top - gb.top) / (rh + gap)), rs = Math.round((r.height + gap) / (rh + gap));
+        f._g = { c0, cs: cs_, r0, rs };
+        for (let i = 0; i < cs_; i++) for (let k = 0; k < rs; k++) occ.add((r0 + k) * 100 + c0 + i);
+        rows = Math.max(rows, r0 + rs);
+      });
+      return { cols, vis, holes: rows * cols - occ.size, rows };
     };
-    items.forEach((b, i) => b.addEventListener('click', () => { show(i); lb.showModal(); }));
+    const fillGaps = () => {
+      figsAll.forEach(f => f.style.gridColumn = '');
+      let m = measure();
+      for (let tries = 0; m.holes > 0 && tries < 6; tries++) {
+        const cands = m.vis.filter(f => f._g.cs < m.cols).reverse();
+        let fixed = false;
+        for (const f of cands) {
+          const prev = f.style.gridColumn;
+          f.style.gridColumn = `span ${Math.min(m.cols, f._g.cs + Math.max(1, Math.floor(m.holes / f._g.rs)))}`;
+          const n = measure();
+          if (n.holes < m.holes) { m = n; fixed = true; break; }
+          f.style.gridColumn = prev; m = measure();
+        }
+        if (!fixed) break;
+      }
+    };
+    addEventListener('resize', () => requestAnimationFrame(fillGaps));
+    $$('.chip').forEach(ch => ch.addEventListener('click', () => {
+      $$('.chip').forEach(c => { c.classList.toggle('is-on', c === ch); c.setAttribute('aria-pressed', c === ch); });
+      const k = ch.dataset.filter;
+      figsAll.forEach(f => { f.hidden = !(k === 'all' || f.dataset.cat === k); });
+      fillGaps();
+      if (!reduce) stagger();
+    }));
+    fillGaps();
+    const lb = $('#lightbox');
+    let list = [], cur = 0;
+    const show = i => {
+      cur = (i + list.length) % list.length;
+      const f = list[cur], im = $('img', f);
+      $('img', lb).src = im.src; $('img', lb).alt = im.alt;
+      $('figcaption', lb).textContent = $('figcaption', f).textContent;
+    };
+    figsAll.forEach(f => $('.gfig__btn', f).addEventListener('click', () => {
+      list = figsAll.filter(x => !x.hidden); show(list.indexOf(f)); lb.showModal();
+    }));
     $('.lightbox__prev', lb).addEventListener('click', () => show(cur - 1));
     $('.lightbox__next', lb).addEventListener('click', () => show(cur + 1));
     $('.lightbox__close', lb).addEventListener('click', () => lb.close());
