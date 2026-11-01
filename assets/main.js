@@ -70,7 +70,7 @@
       kava:    { img: 'prelevani.jpg', alt: 'Přelévaná filtrovaná káva na pozadí naskládaného dřeva', t: 'Filtr z výběrovky měsíce', p: 'Zeptejte se nás na aktuální zrno — rádi Vám povíme, odkud pochází a proč nás tak baví.', h: 'a k tomu perníček ♥' },
       snidane: { img: 'snidane-croissant.jpg', alt: 'Croissant sendvič, latte a pomerančový džus na podnosu s logem DOMA', t: 'Croissant sendvič', p: 'Křupavý croissant plný dobrot, k tomu latte a čerstvý džus. Takhle chutná dobré ráno.', h: 'snídaně jako doma ♥' },
       napoje:  { img: 'ledova-kava.jpg', alt: 'Ledové latte a karamelové frappé se šlehačkou', t: 'Ledová káva & frappé', p: 'Když je venku horko: ledové latte nebo karamelové frappé se šlehačkou. Osvěží i potěší.', h: 'léto u nás ☀' },
-      sladke:  { img: 'kolace.jpg', alt: 'Domácí koláče a fíkový koláč při svíčce', t: 'Domácí koláče', p: 'Pečené s láskou, jako od babičky. A když se poštěstí, i fíkový koláč.', h: 'voní celou kavárnou ♥' }
+      sladke:  { img: 'dort-cokomalina.jpg', alt: 'Čokomalina – čokoládový dort s malinovým želé', t: 'Oblíbená čokomalina', p: 'Čokoládový dort s\u00a0malinami, kvůli kterému se k\u00a0nám hosté vracejí. A\u00a0ve vitríně vždy najdete i\u00a0něco veganského.', h: 'dortíky pečeme s\u00a0láskou ♥' }
     };
     Object.values(cards).forEach(c => { new Image().src = 'assets/img/' + c.img; });
     const img = $('#cardImg'), body = $('.menu__card-body');

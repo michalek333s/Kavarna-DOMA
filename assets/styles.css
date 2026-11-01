@@ -287,7 +287,7 @@ section{position:relative}
 .gfig__btn:hover img{transform:scale(1.04)}
 .gfig figcaption{position:absolute;left:14px;bottom:12px;padding:.15em .7em;border-radius:8px;background:rgba(251,247,241,.92);font-family:var(--hand);font-size:1.3rem;color:var(--espresso-2);pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .5s var(--ease)}
 .gfig:hover figcaption,.gfig:focus-within figcaption{opacity:1;transform:none}
-.gallery__cta{text-align:center;margin-top:40px}
+.gallery__cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:40px}
 .lightbox{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100vh;color:#fff}
 .lightbox[open]{display:grid;grid-template-columns:auto 1fr auto;align-items:center}
 .lightbox::backdrop{background:rgba(26,17,12,.92)}
@@ -307,9 +307,29 @@ section{position:relative}
 .steps p{color:var(--muted)}
 .steps a,.u{text-decoration:underline;text-underline-offset:3px}
 
+/* ---------- cakes ---------- */
+.cakes{max-width:var(--max);margin:0 auto;padding:0 var(--gutter) clamp(70px,9vw,120px)}
+.cakes__head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.cakes__lead{color:var(--muted);max-width:30em}
+.cakes__row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px}
+.cake{margin:0}
+.cake__img{aspect-ratio:4/5;border-radius:var(--r-md);overflow:hidden;box-shadow:0 30px 50px -34px rgba(42,28,21,.6)}
+.cake__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.cake:hover .cake__img img{transform:scale(1.06)}
+.cake figcaption{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;font-family:var(--serif);font-size:1.2rem;font-weight:500}
+.tag--vegan{background:var(--sage)}
+.cakes__order{margin-top:28px;color:var(--muted)}
+@media (max-width:1060px){.cakes__row{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){
+  .cakes__row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);gap:12px;margin:24px calc(-1 * var(--gutter)) 0;padding:0 var(--gutter) 8px;scrollbar-width:none}
+  .cakes__row::-webkit-scrollbar{display:none}
+  .cake{flex:0 0 62%;scroll-snap-align:start}
+  .cake.reveal{opacity:1;transform:none}
+}
+
 /* ---------- cta band ---------- */
 .cta-band{max-width:var(--max);margin:0 auto;padding:0 var(--gutter) clamp(60px,9vw,120px);text-align:center}
-.cta-band__hand{font-family:var(--hand);font-size:2rem;color:var(--wood)}
+.cta-band__hand{font-family:var(--hand);font-size:clamp(1.5rem,3vw,2rem);line-height:1.2;color:var(--wood);max-width:22em;margin:0 auto}
 .cta-band .h2{margin-top:.1em}
 .cta-band .hero__actions{justify-content:center}
 
@@ -476,7 +496,7 @@ section{position:relative}
   .senses__text{font-size:1.75rem}
 
   .explore__head{margin-bottom:24px}
-  .explore__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 calc(-1 * var(--gutter));padding:4px var(--gutter) 34px;scrollbar-width:none}
+  .explore__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);gap:12px;margin:0 calc(-1 * var(--gutter));padding:4px var(--gutter) 34px;scrollbar-width:none}
   .explore__grid::-webkit-scrollbar{display:none}
   .explore__grid .ecard,.explore__grid .ecard:last-child{flex:0 0 78%;aspect-ratio:4/5;scroll-snap-align:center}
   .explore__grid .ecard.reveal{opacity:1;transform:none}
