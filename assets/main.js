@@ -89,7 +89,7 @@
     const words = $$('.w', st);
     const light = () => {
       const r = st.getBoundingClientRect();
-      const p = Math.min(1, Math.max(0, (innerHeight * 0.85 - r.top) / (r.height + innerHeight * 0.35)));
+      const p = Math.min(1, Math.max(0, (innerHeight * 0.9 - r.top) / (r.height + innerHeight * 0.2)));
       const n = Math.round(p * words.length);
       words.forEach((w, i) => w.classList.toggle('on', i < n));
     };
