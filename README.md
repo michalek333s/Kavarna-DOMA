@@ -24,7 +24,9 @@ Nahrajte fotky do `assets/img/` pod těmito názvy. Dokud tam nejsou, zobrazí s
 | `banana-bread.jpg` | banana bread + dýně | galerie |
 | `snehulak.jpg` | sněhulák v latte + srdce ve sněhu | galerie |
 
-Už nahrané: `snidane-croissant.jpg`, `ledova-kava.jpg`, `dve-latte.jpg`, `poukaz.jpg`, `podnos.jpg`, `kolace.jpg`, `croissant-medvidek.jpg`, `rosetta.jpg`, `melounove-drinky.jpg`.
+Už nahrané: `snidane-croissant.jpg`, `ledova-kava.jpg`, `dve-latte.jpg`, `poukaz.jpg`, `podnos.jpg`, `kolace.jpg`, `croissant-medvidek.jpg`, `rosetta.jpg`, `melounove-drinky.jpg`, `banana-bread.jpg`, `prelevani.jpg`, `dyne-latte.jpg`, `podzim-dobroty.jpg`, `drinky-podloubi.jpg`.
+
+Zatím chybí: `kava-tulipany.jpg`, `liska.jpg`, `zajic.jpg`, `snehulak.jpg`, `snidane.jpg`.
 
 Galerie automaticky zobrazí jen fotky, které ve složce existují – stačí nahrát soubor se správným názvem.
 

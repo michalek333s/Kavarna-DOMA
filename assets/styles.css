@@ -369,7 +369,7 @@ section{position:relative}
 .link{display:inline-block;margin-top:.9em;font-weight:600;color:var(--tulip-2);transition:transform .4s var(--ease)}
 .link:hover{transform:translateX(4px)}
 .phone{display:block;font-family:var(--serif);font-size:1.7rem;line-height:1.1;white-space:nowrap}
-.hours li{display:flex;justify-content:space-between;gap:12px;padding:.4em 0;border-bottom:1px solid rgba(251,247,241,.12);font-size:.92rem;color:rgba(251,247,241,.82)}
+.hours li{white-space:nowrap;display:flex;justify-content:space-between;gap:12px;padding:.4em 0;border-bottom:1px solid rgba(251,247,241,.12);font-size:.92rem;color:rgba(251,247,241,.82)}
 .hours li.today{color:var(--cream);font-weight:600}
 .hours li.today span:first-child::before{content:"● ";color:#6BC07A}
 .visit__side{display:grid;grid-template-rows:1.1fr 1fr;gap:20px}
